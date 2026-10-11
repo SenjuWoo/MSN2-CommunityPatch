@@ -1,0 +1,49 @@
+<Project>
+  <!-- Override with: dotnet build -p:GameDir="X:\path\My sexy Neighbour 2" or env MSN2_GAME_DIR -->
+  <PropertyGroup>
+    <GameDir Condition="'$(GameDir)' == '' and '$(MSN2_GAME_DIR)' != ''">$(MSN2_GAME_DIR)</GameDir>
+    <GameDir Condition="'$(GameDir)' == ''">S:\SteamLibrary\steamapps\common\My sexy Neighbour 2</GameDir>
+    <Managed>$(GameDir)\My Sexy Neighbour 2_Data\Managed</Managed>
+    <BepInExCore>$(MSBuildThisFileDirectory)..\..\vendor\BepInEx_5.4.23.5\BepInEx\core</BepInExCore>
+    <TargetFramework>net472</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateDocumentationFile>false</GenerateDocumentationFile>
+    <Deterministic>true</Deterministic>
+    <DebugType>embedded</DebugType>
+    <NoWarn>$(NoWarn);CS0618;CS0436;MSB3277</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BepInEx"><HintPath>$(BepInExCore)\BepInEx.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="0Harmony"><HintPath>$(BepInExCore)\0Harmony.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="netstandard"><HintPath>$(Managed)\netstandard.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Assembly-CSharp"><HintPath>$(Managed)\Assembly-CSharp.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Newtonsoft.Json"><HintPath>$(Managed)\Newtonsoft.Json.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine"><HintPath>$(Managed)\UnityEngine.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.CoreModule"><HintPath>$(Managed)\UnityEngine.CoreModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AnimationModule"><HintPath>$(Managed)\UnityEngine.AnimationModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AIModule"><HintPath>$(Managed)\UnityEngine.AIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.AudioModule"><HintPath>$(Managed)\UnityEngine.AudioModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ClothModule"><HintPath>$(Managed)\UnityEngine.ClothModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.IMGUIModule"><HintPath>$(Managed)\UnityEngine.IMGUIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.TextRenderingModule"><HintPath>$(Managed)\UnityEngine.TextRenderingModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.InputLegacyModule"><HintPath>$(Managed)\UnityEngine.InputLegacyModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ParticleSystemModule"><HintPath>$(Managed)\UnityEngine.ParticleSystemModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.PhysicsModule"><HintPath>$(Managed)\UnityEngine.PhysicsModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ScreenCaptureModule"><HintPath>$(Managed)\UnityEngine.ScreenCaptureModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UI"><HintPath>$(Managed)\UnityEngine.UI.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.UIModule"><HintPath>$(Managed)\UnityEngine.UIModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.RenderPipelines.Core.Runtime"><HintPath>$(Managed)\Unity.RenderPipelines.Core.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.RenderPipelines.Universal.Runtime"><HintPath>$(Managed)\Unity.RenderPipelines.Universal.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.RenderPipelines.GPUDriven.Runtime"><HintPath>$(Managed)\Unity.RenderPipelines.GPUDriven.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="IngameDebugConsole.Runtime"><HintPath>$(Managed)\IngameDebugConsole.Runtime.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.TextMeshPro"><HintPath>$(Managed)/Unity.TextMeshPro.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="NodeCanvas"><HintPath>$(Managed)/NodeCanvas.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="ParadoxNotion"><HintPath>$(Managed)/ParadoxNotion.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="DOTween"><HintPath>$(Managed)/DOTween.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Zenject"><HintPath>$(Managed)\Zenject.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UniTask"><HintPath>$(Managed)\UniTask.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="R3"><HintPath>$(Managed)\R3.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

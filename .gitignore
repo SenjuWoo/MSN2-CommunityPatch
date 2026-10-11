@@ -1,0 +1,7 @@
+﻿research/
+vendor/
+dist/
+**/bin/
+**/obj/
+*.user
+backups/
