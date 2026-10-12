@@ -4,7 +4,10 @@ Active snapshot: `MSN2 Expansion 0.1.0` (CURRENT.txt). Updated 2026-10-12.
 
 ## Done
 - Patch + Expansion 0.1.0 runtime-tested: see `MSN2 Expansion 0.1.0/TEST_RESULTS.md`, open items in `TASKS.md`.
-- Release: `tools/package.ps1 -Version 0.1.0` → dist/0.1.0/*.zip. GitHub repo SenjuWoo/MSN2-CommunityPatch.
+- Released v0.1.0: https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.1.0 (tag @ 09ecaf1, CI validate + CodeQL green, 0 open alerts). Assets sha256: CommunityPatch 67a380d3…68e5 (694,972 B), Expansion 6438bce3…d876 (53,831 B); downloaded bytes verified identical.
+- Game folder now holds the release install (quiet defaults, AgentBridge off). Dev config backup: backups/devcfg (restore it or set AgentBridge=true before using tools/agent.ps1).
+- User save restored byte-exact to the pre-test original; test end-state kept in backups/test-end-state.
+- Snapshot 0.1.0 is now the released, frozen copy: start the next change by copying it to `MSN2 Expansion 0.1.1` (or 0.2.0) and updating CURRENT.txt.
 
 ## Next
 See TASKS.md "Next": review bugs (door fling, NPC teleport, drawers, gallery, rebinding), MSN1 systems (telescope, safe, souvenir shelf, weather, stats), more packs.
