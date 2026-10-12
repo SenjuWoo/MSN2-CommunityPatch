@@ -1,0 +1,22 @@
+name: validate
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  packs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 22
+      - name: Validate job packs of the active snapshot
+        run: |
+          snap="$(tr -d '\r\n\357\273\277' < CURRENT.txt)"
+          node "$snap/tools/validate-packs.mjs" "$snap/packs"
+      - name: No personal paths or decompiled game code in the repo
+        run: |
+          ! git ls-files | grep -Ei '(^|/)(research|vendor|backups)/'
+          ! git grep -nI -E 'C:\\Users\\[A-Za-z]+' -- . ':!.github'

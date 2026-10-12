@@ -32,7 +32,7 @@ namespace MSN2Expansion
             Reg("steal", Steal);
             Reg("cam", Cam);
             Reg("key", KeyPress);
-            ExpansionPlugin.Log.LogInfo("[agent] expansion commands registered: mx, snap, steal, cam, key");
+            ExpansionPlugin.Log.LogDebug("[agent] expansion test commands registered (active only when the patch AgentBridge is enabled)");
         }
 
         private static void Reg(string name, Func<string, string[], IEnumerator> f) => _register.Invoke(null, new object[] { name, f });
@@ -67,6 +67,12 @@ namespace MSN2Expansion
             string sub = a.Length > 0 ? a[0] : "";
             if (sub == "accept") return Done(id, new { ok = R.Accept(a[1]), state = Summary() });
             if (sub == "audit") return Done(id, Audit());
+            if (sub == "openhouse")
+            {
+                var hoc = UnityEngine.Object.FindFirstObjectByType<_Game.Systems.HouseOpenerController.HouseOpenerController>();
+                hoc.OpenHouse((Game.Zones.HouseZoneID)Enum.Parse(typeof(Game.Zones.HouseZoneID), a[1]));
+                return Done(id, new { ok = hoc.IsHouseOpened((Game.Zones.HouseZoneID)Enum.Parse(typeof(Game.Zones.HouseZoneID), a[1])) });
+            }
             if (sub == "turnin") return Done(id, new { ok = R.TurnIn(a[1]), state = Summary() });
             if (sub == "reset") { Sidecar.State = new ExpansionState(); R.OnStateReplaced(); return Done(id, Summary()); }
             if (sub == "event" && R.Hooks != null)

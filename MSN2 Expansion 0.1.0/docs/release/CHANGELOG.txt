@@ -1,0 +1,14 @@
+MSN2 Community Patch 0.1.0
+- Fix: per-frame "CurrentHouseDataSO is null" exception from the house HUD (+23% FPS measured, no more log spam)
+- Fix: house resident portraits showed the wrong house and ignored NPCs walking in
+- Fix: Medium/Low presets capped at 60 FPS; VSync and FPS limit now apply to every preset
+- Fix: NPCs freezing forever when an action ignores an interrupt (8 s timeout)
+- Fix: Low preset allowed more per-object lights than Medium
+- New: graphics options (MSAA, render scale + FSR, shadow distance, lamp shadows, shadow atlas, soft shadows)
+- Bundles BepInEx 5.4.23.5
+
+MSN2 Expansion 0.1.0
+- New: job system with journal (J), objective tracker and dialogue
+- New: Neighbourhood Classics, 5 story jobs from The Collector with MSN1-style bonus objectives
+- New: job packs are plain JSON, validated on startup
+- Job progress saved beside the game save; the game's own save is never modified
