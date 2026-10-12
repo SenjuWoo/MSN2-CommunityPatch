@@ -8,5 +8,5 @@ $Script:BepInExSrc  = Join-Path $OwnerRoot 'vendor\BepInEx_5.4.23.5'
 $Script:PluginDir   = Join-Path $GameDir 'BepInEx\plugins\MSN2'
 $Script:AgentDir    = Join-Path $GameDir 'BepInEx\MSN2\agent'
 $Script:SaveDir     = Join-Path ([Environment]::GetFolderPath('UserProfile')) 'AppData\LocalLow\DefaultCompany\My Sexy Neighbour 2'
-$Script:Projects    = @('MSN2CommunityPatch')
+$Script:Projects    = @('MSN2CommunityPatch', 'MSN2Expansion')
 if (-not (Test-Path -LiteralPath $GameExe)) { throw "Game not found: $GameExe (set MSN2_GAME_DIR)" }

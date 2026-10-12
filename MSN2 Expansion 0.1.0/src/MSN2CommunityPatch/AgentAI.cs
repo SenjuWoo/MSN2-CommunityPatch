@@ -15,6 +15,7 @@ namespace MSN2CommunityPatch
         {
             actor = a.ActorID.ToString(),
             pos = a.transform.position.ToString("F1"),
+            room = Object.FindFirstObjectByType<Game.Zones.ZonesController>() is var z && z && z.IsPointInSubZone(a.transform.position, out var sz) && sz ? sz.SubZoneType.ToString() : null,
             fsm = a.AiFsmController?.FsmOwner?.behaviour ? a.AiFsmController.FsmOwner.behaviour.name : null,
             rootState = a.AiFsmController?.FsmOwner?.currentRootStateName,
             deepState = a.AiFsmController?.FsmOwner?.currentDeepStateName,

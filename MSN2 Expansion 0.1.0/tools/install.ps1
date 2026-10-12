@@ -16,5 +16,9 @@ if (-not (Test-Path (Join-Path $GameDir 'BepInEx\core\BepInEx.dll'))) {
 New-Item -ItemType Directory -Force $PluginDir | Out-Null
 foreach ($p in $Projects) { Copy-Item (Join-Path $VersionRoot "src\$p\bin\Release\$p.dll") $PluginDir -Force }
 $packs = Join-Path $VersionRoot 'packs'
-if (Test-Path $packs) { Copy-Item $packs (Join-Path $PluginDir 'packs') -Recurse -Force }
+if (Test-Path $packs) {
+    $dst = Join-Path $PluginDir 'packs'
+    if (Test-Path $dst) { Remove-Item $dst -Recurse -Force }  # packs are owned by this project; avoid stale/nested copies
+    Copy-Item $packs $dst -Recurse
+}
 Get-ChildItem $PluginDir -Recurse -File | ForEach-Object { '{0}  {1}' -f (Get-FileHash $_.FullName -Algorithm SHA256).Hash.Substring(0, 12), $_.FullName.Substring($GameDir.Length + 1) }

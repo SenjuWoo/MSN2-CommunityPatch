@@ -10,8 +10,8 @@ if (Get-Process 'My Sexy Neighbour 2' -ErrorAction SilentlyContinue) {
 & "$PSScriptRoot\install.ps1" | Out-Null
 if ($Config) {
     # dev-only overrides, e.g. -Config @{ VerboseLog = 'true' }
-    $cfg = Join-Path $GameDir 'BepInEx\config\senjuwoo.msn2.communitypatch.cfg'
-    if (Test-Path $cfg) {
+    # applies to every senjuwoo.msn2.*.cfg that has the key (cfg files exist after the first launch)
+    foreach ($cfg in (Get-ChildItem (Join-Path $GameDir 'BepInEx\config') -Filter 'senjuwoo.msn2.*.cfg').FullName) {
         $text = Get-Content $cfg -Raw
         foreach ($k in $Config.Keys) { $text = $text -replace "(?m)^$k = .*$", "$k = $($Config[$k])" }
         Set-Content $cfg $text -Encoding utf8 -NoNewline
