@@ -1,4 +1,4 @@
-MSN2 Expansion 0.2.0 - "Neighbourhood Classics" story jobs for My Sexy Neighbour 2
+MSN2 Expansion 0.2.1 - "Neighbourhood Classics" story jobs for My Sexy Neighbour 2
 by SenjuWoo
 
 The first game had a story: a client, a target, a plan, side objectives. This brings that back.

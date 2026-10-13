@@ -1,4 +1,4 @@
-MSN2 Community Patch 0.2.0 - My Sexy Neighbour 2 (Steam build 21130045, v10.12.2025 1229)
+MSN2 Community Patch 0.2.1 - My Sexy Neighbour 2 (Steam build 21130045, v10.12.2025 1229)
 by SenjuWoo
 
 INSTALL

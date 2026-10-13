@@ -12,7 +12,7 @@ Players: download the zips from [Releases](../../releases) and extract into the 
 ## Repository layout
 ```
 CURRENT.txt                    active snapshot folder
-MSN2 Expansion 0.2.0/
+MSN2 Expansion 0.2.1/
   src/MSN2CommunityPatch       patch plugin
   src/MSN2Expansion            expansion framework plugin
   packs/                       job packs (docs/PACK_FORMAT.md)
@@ -28,8 +28,8 @@ MAP.md                         full project map: code, runtime paths, tools, rel
 Needs the game installed (assemblies are referenced from its `Managed` folder, never committed), .NET SDK 8+, and BepInEx 5.4.23.5 extracted to `vendor/BepInEx_5.4.23.5` (gitignored).
 ```powershell
 $env:MSN2_GAME_DIR = 'D:\Steam\steamapps\common\My sexy Neighbour 2'   # only if not S:\SteamLibrary\steamapps\common\My sexy Neighbour 2 (tools/common.ps1 default)
-& '.\MSN2 Expansion 0.2.0\tools\build.ps1'
-& '.\MSN2 Expansion 0.2.0\tools\package.ps1' -Version 0.2.0
+& '.\MSN2 Expansion 0.2.1\tools\build.ps1'
+& '.\MSN2 Expansion 0.2.1\tools\package.ps1' -Version 0.2.1
 ```
 `tools/relaunch.ps1` + `tools/agent.ps1` drive the running game for tests (enable `[Debug] AgentBridge` in the patch config).
 
