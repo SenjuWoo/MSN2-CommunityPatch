@@ -3,6 +3,8 @@ MSN2 Community Patch 0.2.1
 
 MSN2 Expansion 0.2.1
 - Fix: the job journal (J) and the job tracker showed only the dark backdrop with no text after loading a save again (after being arrested and pressing Load, or Exit to menu then Continue); the game destroys its font when the scene unloads, the HUD now picks up the new one
+- Fix: the journal keys (J, Enter, comma, period) no longer fire while you type in a game text box (PC channel name, password, debt amount) or while the pause menu is open (they used to toggle the journal while rebinding keys)
+- Fix: the job HUD no longer draws over the "You have been caught" screen; the journal closes when the pause menu opens
 
 MSN2 Community Patch 0.2.0
 - Fix: hiding in / leaving a wardrobe could throw the player across the map or off target at low frame rates (measured 4 m per frame at ~9 FPS, 11 m at ~3 FPS; now under 1 m)

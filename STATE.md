@@ -16,8 +16,8 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - User data untouched: save00.dat byte-identical to the original; settings.dat restored to its session-start state (backups/saves/20261012-204323).
 
 ## Next
-- 0.2.1 (in progress): fixed journal/tracker text invisible after reload (arrest -> Load). Committed, NOT released; batch more bug fixes first. Game folder currently has the 0.2.1 dev build with AgentBridge+VerboseLog on (restore quiet cfg from backups/devcfg or run install of the release before shipping).
-- Bug hunt list: post-arrest/reload state (other scene-owned refs), sex/cum_on hooks untested, jobs 3-5 not played through, owner test of Controls.
+- 0.2.1 (in progress, committed, NOT released): fixed journal/tracker text invisible after reload (arrest -> Load), journal keys firing while typing in game text boxes / pause menu, HUD over the caught screen. Game folder has the 0.2.1 build with quiet config; user save restored to the original (backups/saves/pre-arrest-20261013).
+- Still untested: `sex`/`cum_on` hooks, jobs 2-5 played through, gamepad, owner hands-on of Controls. Open design question: arrest keeps job progress while vanilla resets entities (cams/items) - ask owner.
 - Commit the docs update (this file + memory) and push; confirm CI on the new SHA and alerts = 0.
 - Hands-on test of Settings > Controls by the owner (not yet done).
 - 0.3.0: MSN1 systems per TASKS.md "Next".

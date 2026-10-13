@@ -67,6 +67,13 @@ namespace MSN2Expansion
             string sub = a.Length > 0 ? a[0] : "";
             if (sub == "accept") return Done(id, new { ok = R.Accept(a[1]), state = Summary() });
             if (sub == "hud") return Done(id, ExpansionHud.Instance?.Diagnose());
+            if (sub == "arrest")
+            {
+                // the game's own caught-by-cop game-over state (same call CopActorEntity.CapturePlayer makes)
+                var fsm = UnityEngine.Object.FindFirstObjectByType<Game.Core.GameFSMController>();
+                Cysharp.Threading.Tasks.UniTaskExtensions.Forget(fsm.SetStateAsync<Game.GameEndState, Game.GameEndState.Arguments>(new Game.GameEndState.Arguments { GameOver = Game.GameEndState.Arguments.GameOverType.CaughtByCop }));
+                return Done(id, new { ok = true });
+            }
             if (sub == "audit") return Done(id, Audit());
             if (sub == "openhouse")
             {

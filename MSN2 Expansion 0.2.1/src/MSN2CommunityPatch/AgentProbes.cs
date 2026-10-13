@@ -82,6 +82,15 @@ namespace MSN2CommunityPatch
                     .Select(r => { var s = Controls.KeyBindings.Find(r.Item1, r.Item2, r.Item3); return s == null ? r.Item1 + " (missing)" : $"{s.Name,-26} {s.Path,-24} display='{s.Display}' default={s.IsDefault}"; }).ToArray();
                 return AgentBridge.Done(id, new { custom = Controls.KeyBindings.HasCustom, file = Controls.KeyBindings.FilePath, rows });
             });
+            // rebind <Map/Action> <Key|reset>: programmatic equivalent of the Controls page (override + the same Commit that saves the file)
+            AgentBridge.Register("rebind", (id, a) =>
+            {
+                var slot = a.Length > 0 ? Controls.KeyBindings.Find(a[0]) : null;
+                if (slot == null || a.Length < 2) return AgentBridge.Done(id, new { ok = false, error = "usage: rebind <Map/Action> <Key|reset>" });
+                if (a[1] == "reset") Controls.KeyBindings.Reset(slot);
+                else { slot.Action.ApplyBindingOverride(slot.Index, "<Keyboard>/" + a[1].ToLowerInvariant()); AccessTools.Method(typeof(Controls.KeyBindings), "Commit").Invoke(null, new object[] { slot.Inputs }); }
+                return AgentBridge.Done(id, new { ok = true, custom = Controls.KeyBindings.HasCustom });
+            });
             AgentBridge.Register("looking", (id, a) =>
             {
                 var oi = UnityEngine.Object.FindFirstObjectByType<Game.ObjectsInteractor>();

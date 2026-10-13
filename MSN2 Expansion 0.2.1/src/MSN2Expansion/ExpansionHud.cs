@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
@@ -23,6 +24,10 @@ namespace MSN2Expansion
         private float _lineShownAt, _lineHold;
         private int _selected;
         private bool _dirty = true;
+        private bool _blocked;
+        private Game.UI.EscapeView _escape;
+        private Game.Views.GameOverView _gameOver;
+        private float _nextViewFind;
 
         public bool JournalOpen => _journal && _journal.activeSelf;
         public string CurrentLine => _dialogue && _dialogue.activeSelf ? $"{_speaker.text}: {_line.text}" : null;
@@ -98,6 +103,25 @@ namespace MSN2Expansion
             ExpansionPlugin.Log.LogInfo($"[hud] font re-resolved: {f.name}");
         }
 
+        // Scene-owned views are destroyed on reload; look them up again once a second until found.
+        private void ResolveViews()
+        {
+            if ((_escape && _gameOver) || Time.unscaledTime < _nextViewFind) return;
+            _nextViewFind = Time.unscaledTime + 1f;
+            if (!_escape) _escape = FindFirstObjectByType<Game.UI.EscapeView>(FindObjectsInactive.Include);
+            if (!_gameOver) _gameOver = FindFirstObjectByType<Game.Views.GameOverView>(FindObjectsInactive.Include);
+        }
+
+        private static bool TypingInUi()
+        {
+            var sel = EventSystem.current ? EventSystem.current.currentSelectedGameObject : null;
+            if (!sel) return false;
+            var tmp = sel.GetComponent<TMP_InputField>();
+            if (tmp && tmp.isFocused) return true;
+            var ui = sel.GetComponent<InputField>();
+            return ui && ui.isFocused;
+        }
+
         private static TMP_FontAsset FindGameFont()
         {
             // HUD clock text uses the game's pixel font; fall back to any loaded TMP font
@@ -158,8 +182,10 @@ namespace MSN2Expansion
             _dialogue.SetActive(true);
         }
 
-        private static bool Pressed(string keyName) =>
-            Keyboard.current != null && Enum.TryParse<Key>(keyName, true, out var k) && Keyboard.current[k].wasPressedThisFrame;
+        // Our keys (J, Enter, comma, period) must not fire while the player is typing in a game text box (channel name,
+        // password, debt amount), in the pause menu (key rebinding listens for the next key press there), or on the arrest screen.
+        private bool Pressed(string keyName) =>
+            !_blocked && Keyboard.current != null && Enum.TryParse<Key>(keyName, true, out var k) && Keyboard.current[k].wasPressedThisFrame;
 
         private void Update()
         {
@@ -170,6 +196,15 @@ namespace MSN2Expansion
             }
             EnsureBuilt();
             RefreshFont();
+            ResolveViews();
+            if (_gameOver && _gameOver.IsOpened)
+            {
+                // the arrest popup is drawn by the game; keep the job HUD off it
+                if (_root.activeSelf) _root.SetActive(false);
+                return;
+            }
+            _blocked = (_escape && _escape.IsOpened) || TypingInUi();
+            if (_escape && _escape.IsOpened && JournalOpen) _journal.SetActive(false);  // pause menu opens over it otherwise
             if (!_root.activeSelf) _root.SetActive(true);
 
             if (_dialogue.activeSelf)

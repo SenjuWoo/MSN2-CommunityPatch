@@ -78,3 +78,7 @@ Input for UI tests is injected through the Unity Input System event queue (`agen
 
 ## 0.2.1
 - Journal text after reload (runtime): before fix, Exit -> Continue gave fontAlive=false, bodyFont=null, screenshot = backdrop only (matches the report "no text just the backdrop after getting arrested"). After fix: log `[hud] font re-resolved`, fontAlive=true, journal fully rendered (screenshot). Arrest itself was not triggered; the arrest "Load" button uses the same scene reload (GameOverView -> LoadSceneWithLoaderAsync<GameInitState>).
+- Real arrest (runtime, `mx arrest` -> Continue): game over screen showed tracker + dialogue over the popup (now hidden, rootActive=False). After Continue: sidecar loaded (5 missions), mission re-attached, journal text OK, progress kept (souvenir done). Arrest adds 3 game hours, so a running 4-hour bonus fails (vanilla behaviour, left as is).
+- Key blocking (runtime): J toggles the journal in play; while the pause menu is open J is ignored; after resuming J works again. Text-box blocking (TMP_InputField focus) is code-verified only: the PC registration box exists only on a new game, not tested.
+- Job 1 end to end (runtime): accept, souvenir steal, photo, hidden camera -> auto-complete, rewards 400 money / 175 subs match the pack (250+75+75, 150+25), nc02 unlocked.
+- Log scan of the whole session: no exceptions from either plugin (2 vanilla OperationCanceledException from NPC move interrupts on alert).

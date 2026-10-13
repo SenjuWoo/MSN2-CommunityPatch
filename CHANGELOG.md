@@ -3,7 +3,10 @@
 ## 0.2.1 — unreleased
 AI: Claude Code, Sonnet 5.5. Parent: 0.2.0. Goal: bug-fix pass.
 - Fix (Expansion): journal/tracker text invisible (backdrop only) after reloading a save, e.g. arrest -> Load. Cause: the game destroys its TMP font on scene unload; the HUD kept the dead reference. Reproduced and verified in game (Exit -> Continue).
-- New: dev probe `mx hud`
+- Fix (Expansion): J/Enter/comma/period fired while typing in game text boxes (PC channel name, password, debt amount) and while the pause menu was open (rebinding a key to one of them toggled the journal)
+- Fix (Expansion): job HUD drew over the game-over (caught) screen; journal stays open over the pause menu
+- New: dev probes `mx hud`, `mx arrest` (real caught-by-cop game over), `rebind`
+- Checked, no bug: arrest -> Continue keeps sidecar progress and re-attaches; controls hint scan (6/6 found in 3.5 ms once)
 
 ## 0.2.0 — 2026-10-12
 AI: Claude Code, Sonnet 5.5 (max reasoning). Parent: 0.1.0. Goal: finish the official patch.
