@@ -1,6 +1,6 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.2.1` (CURRENT.txt, unreleased, parent 0.2.0). Updated 2026-10-13. Project map: MAP.md.
+Active snapshot: `MSN2 Expansion 0.2.1` (CURRENT.txt, released as v0.2.1). Updated 2026-10-13. Project map: MAP.md.
 
 ## Scope (recovered 2026-10-12 after chat loss; original brief in research/RECOVERED_BRIEF.md)
 Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for performance + bugs (Community Patch). Phase 2 = bring missing My Sexy Neighbor 1 content to MSN2 (Expansion). Runtime-only BepInEx/Harmony; no game files edited; no Unity Editor/MCP (editor 2022.3 ≠ game 6000.2.2).
@@ -9,6 +9,7 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - Resume rule: verify against `git status`, the release assets and `BepInEx/LogOutput.log` before trusting this file.
 
 ## Done
+- **0.2.1 released:** https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.2.1 (main @ 98e1793; CI validate + CodeQL green; alerts 0/0/0; downloaded asset bytes match dist: CommunityPatch sha256 9BA3D5FA…CF1F8, Expansion 9B051B1C…CDB3). Fixes: journal font after reload, key blocking while typing/paused, HUD off caught screen.
 - 0.1.0 released: https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.1.0 (tag @ 09ecaf1, CI validate + CodeQL green). Frozen copy: `MSN2 Expansion 0.1.0`.
 - **0.2.0 released:** https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.2.0 (main @ 18b2ebd; CI validate + CodeQL green; open alerts 0/0/0; downloaded asset bytes match dist: CommunityPatch sha256 0DE569ED…8E30C, Expansion 1ECD5041…D35CF). `gh` works as SenjuWoo (`gh api user -q .login`); keyring label "ShugokiFable" is a label only.
 - 0.2.0 runtime-tested (TEST_RESULTS.md). Release smoke test (no agent, quiet config): both plugins load 0.2.0, no warnings, game closes cleanly.
@@ -16,7 +17,7 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - User data untouched: save00.dat byte-identical to the original; settings.dat restored to its session-start state (backups/saves/20261012-204323).
 
 ## Next
-- 0.2.1 (in progress, committed, NOT released): fixed journal/tracker text invisible after reload (arrest -> Load), journal keys firing while typing in game text boxes / pause menu, HUD over the caught screen. Game folder has the 0.2.1 build with quiet config; user save restored to the original (backups/saves/pre-arrest-20261013).
+- 0.2.1 (released; details): fixed journal/tracker text invisible after reload (arrest -> Load), journal keys firing while typing in game text boxes / pause menu, HUD over the caught screen. Game folder has the 0.2.1 build with quiet config; user save restored to the original (backups/saves/pre-arrest-20261013).
 - Still untested: `sex`/`cum_on` hooks, jobs 2-5 played through, gamepad, owner hands-on of Controls. Open design question: arrest keeps job progress while vanilla resets entities (cams/items) - ask owner.
 - Commit the docs update (this file + memory) and push; confirm CI on the new SHA and alerts = 0.
 - Hands-on test of Settings > Controls by the owner (not yet done).
