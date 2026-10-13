@@ -1,6 +1,6 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.2.0` (CURRENT.txt). Updated 2026-10-13. Project map: MAP.md.
+Active snapshot: `MSN2 Expansion 0.2.1` (CURRENT.txt, unreleased, parent 0.2.0). Updated 2026-10-13. Project map: MAP.md.
 
 ## Scope (recovered 2026-10-12 after chat loss; original brief in research/RECOVERED_BRIEF.md)
 Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for performance + bugs (Community Patch). Phase 2 = bring missing My Sexy Neighbor 1 content to MSN2 (Expansion). Runtime-only BepInEx/Harmony; no game files edited; no Unity Editor/MCP (editor 2022.3 ≠ game 6000.2.2).
@@ -16,6 +16,8 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - User data untouched: save00.dat byte-identical to the original; settings.dat restored to its session-start state (backups/saves/20261012-204323).
 
 ## Next
+- 0.2.1 (in progress): fixed journal/tracker text invisible after reload (arrest -> Load). Committed, NOT released; batch more bug fixes first. Game folder currently has the 0.2.1 dev build with AgentBridge+VerboseLog on (restore quiet cfg from backups/devcfg or run install of the release before shipping).
+- Bug hunt list: post-arrest/reload state (other scene-owned refs), sex/cum_on hooks untested, jobs 3-5 not played through, owner test of Controls.
 - Commit the docs update (this file + memory) and push; confirm CI on the new SHA and alerts = 0.
 - Hands-on test of Settings > Controls by the owner (not yet done).
 - 0.3.0: MSN1 systems per TASKS.md "Next".

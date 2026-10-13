@@ -1,0 +1,31 @@
+MSN2 Community Patch 0.2.1
+- Version bump to match the Expansion, no patch changes
+
+MSN2 Expansion 0.2.1
+- Fix: the job journal (J) and the job tracker showed only the dark backdrop with no text after loading a save again (after being arrested and pressing Load, or Exit to menu then Continue); the game destroys its font when the scene unloads, the HUD now picks up the new one
+
+MSN2 Community Patch 0.2.0
+- Fix: hiding in / leaving a wardrobe could throw the player across the map or off target at low frame rates (measured 4 m per frame at ~9 FPS, 11 m at ~3 FPS; now under 1 m)
+- Fix: 12 of the 148 theft spawn points sit inside furniture and can never be reached; theft tasks no longer use them
+- New: Settings > Controls is rebindable (click a key, press the new one), also from the main menu; conflicts swap, "Reset all keys" restores defaults
+- New: Controls page also lists the selfie camera key; HUD key hints (Q, Tab, E, R, F) follow your keys
+- New: [Fixes] WardrobeTween, TheftSpots, KeyRemapping options; bindings saved in BepInEx\config\senjuwoo.msn2.bindings.json
+
+MSN2 Expansion 0.2.0
+- Version bump to match the patch, no new content
+- With the Community Patch installed, souvenir items avoid the 12 unreachable theft spots
+
+MSN2 Community Patch 0.1.0
+- Fix: per-frame "CurrentHouseDataSO is null" exception from the house HUD (+23% FPS measured, no more log spam)
+- Fix: house resident portraits showed the wrong house and ignored NPCs walking in
+- Fix: Medium/Low presets capped at 60 FPS; VSync and FPS limit now apply to every preset
+- Fix: NPCs freezing forever when an action ignores an interrupt (8 s timeout)
+- Fix: Low preset allowed more per-object lights than Medium
+- New: graphics options (MSAA, render scale + FSR, shadow distance, lamp shadows, shadow atlas, soft shadows)
+- Bundles BepInEx 5.4.23.5
+
+MSN2 Expansion 0.1.0
+- New: job system with journal (J), objective tracker and dialogue
+- New: Neighbourhood Classics, 5 story jobs from The Collector with MSN1-style bonus objectives
+- New: job packs are plain JSON, validated on startup
+- Job progress saved beside the game save; the game's own save is never modified

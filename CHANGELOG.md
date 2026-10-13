@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 — unreleased
+AI: Claude Code, Sonnet 5.5. Parent: 0.2.0. Goal: bug-fix pass.
+- Fix (Expansion): journal/tracker text invisible (backdrop only) after reloading a save, e.g. arrest -> Load. Cause: the game destroys its TMP font on scene unload; the HUD kept the dead reference. Reproduced and verified in game (Exit -> Continue).
+- New: dev probe `mx hud`
+
 ## 0.2.0 — 2026-10-12
 AI: Claude Code, Sonnet 5.5 (max reasoning). Parent: 0.1.0. Goal: finish the official patch.
 - Fix: wardrobe hide/exit threw the player across the map at low frame rates (two competing tweens, one aimed at world origin); max jump per frame 11 m -> 0.8 m at ~3 FPS

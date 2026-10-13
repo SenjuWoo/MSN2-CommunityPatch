@@ -5,7 +5,7 @@ Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURREN
 ## Folders
 | Path | Tracked | What |
 |---|---|---|
-| `MSN2 Expansion 0.2.0/` | yes | active code, tools, docs, packs |
+| `MSN2 Expansion 0.2.1/` | yes | active code, tools, docs, packs |
 | `MSN2 Expansion 0.1.0/` | yes | frozen copy of the released 0.1.0 |
 | `.github/` (root) | yes | CI (`validate.yml`), Dependabot |
 | `WORKSPACE_OWNERSHIP.md`, `LICENSE`, `.gitattributes` (root) | yes | ownership rules, MIT licence, CRLF for .cs/.ps1 |
@@ -16,7 +16,7 @@ Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURREN
 
 Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `BepInEx/plugins/MSN2/`, plus `BepInEx/MSN2/agent/` for the test bridge.
 
-## Code (in `MSN2 Expansion 0.2.0/src/`)
+## Code (in `MSN2 Expansion 0.2.1/src/`)
 **MSN2CommunityPatch** (no game files, Harmony + BepInEx)
 - `Plugin.cs`: entry, config binds, applies each fix in isolation (`TryApply`).
 - `Fixes/HouseHudFix.cs`: house HUD null exception + portraits + zone handlers.
