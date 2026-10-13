@@ -28,3 +28,8 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - Test runs read the user's save00 slot but never save it; launch.ps1 still backs up `*.dat` to backups/saves/<timestamp>. Restore settings.dat from the first backup of a session when done.
 - Computer-use access to the game was declined by the user; use the agent for input and screenshots.
 - WindowsApps `python3` alias hangs; use node.
+
+## Recovery 2026-10-13 (second chat loss)
+- Cause: BleachBit wiped Claude transcripts. They live in `%USERPROFILE%\.claude\projects\<project>\<id>.jsonl` (+ Desktop metadata in `%APPDATA%\Claude\claude-code-sessions`), not in temp. Whitelist `.claude` and `.codex` in BleachBit.
+- Codex backup thread 01a13620 (`.codex\sessions\2026\10\13\rollout-...01a13620...jsonl`) ends at the v0.2.0 release; repo is newer (docs commits 86a7d65, 71d804f). No code lost. Lost: the post-release Steam bug triage conversation.
+- Steam hub threads (3684710 / 569291110057293585, 594069606514129316) are login-gated; fetch needs the owner's pasted text.
