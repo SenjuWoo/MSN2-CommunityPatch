@@ -1,4 +1,4 @@
-# MSN2 Expansion — job pack format (framework 0.1.0)
+# MSN2 Expansion — job pack format (framework 0.2.0; job format unchanged since 0.1.0)
 
 A pack is a folder with a `pack.json` inside `BepInEx/plugins/MSN2/packs/`. Packs load in alphabetical folder order; later packs may chain off earlier packs' jobs. Every value is checked against the game's own enums at startup. Invalid packs are skipped and each problem is logged to `BepInEx/LogOutput.log` as `[packs] <file>: <where>: <problem>`. Unknown keys are errors (typos never pass silently).
 
@@ -36,6 +36,8 @@ The job ends when the player turns it in from the journal, or automatically once
 | `sex` | the player wins the sex minigame | `actor`, `house` |
 | `cum_on` | the fap minigame finishes on an NPC | `actor` |
 | `enter` | the player enters a house / room | `house`, `room` |
+
+An objective's own `reward` (same shape as the job `reward`) is paid on turn-in only when that objective is a done bonus. On a main objective it is never paid.
 
 Bonus-only constraints (start satisfied, can only fail): `no_alert` (fails when any NPC — or `actor` — reaches full alert), `within_hours` with `"hours": N` (fails after N in-game hours).
 
