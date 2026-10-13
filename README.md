@@ -21,12 +21,13 @@ MSN2 Expansion 0.2.0/
   ARCHITECTURE.md              design, save compatibility, extension points
   TEST_RESULTS.md              in-game test evidence
   TASKS.md                     done / partial / blocked
+MAP.md                         full project map: code, runtime paths, tools, release steps
 ```
 
 ## Build
 Needs the game installed (assemblies are referenced from its `Managed` folder, never committed), .NET SDK 8+, and BepInEx 5.4.23.5 extracted to `vendor/BepInEx_5.4.23.5` (gitignored).
 ```powershell
-$env:MSN2_GAME_DIR = 'D:\Steam\steamapps\common\My sexy Neighbour 2'   # if not the default path
+$env:MSN2_GAME_DIR = 'D:\Steam\steamapps\common\My sexy Neighbour 2'   # only if not S:\SteamLibrary\steamapps\common\My sexy Neighbour 2 (tools/common.ps1 default)
 & '.\MSN2 Expansion 0.2.0\tools\build.ps1'
 & '.\MSN2 Expansion 0.2.0\tools\package.ps1' -Version 0.2.0
 ```
