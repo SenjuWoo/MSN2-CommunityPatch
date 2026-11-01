@@ -1,4 +1,17 @@
+<p align="center">
+  <img src="assets/mark.svg" width="72" height="72" alt="MSN2 Community Patch + Expansion">
+</p>
+
+<div align="center">
+
 # MSN2 Community Patch + Expansion
+
+<p>
+  <a href="https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/latest"><img src="https://img.shields.io/github/v/release/SenjuWoo/MSN2-CommunityPatch?label=release&color=A06A3E&labelColor=0d1117" alt="latest release"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-A06A3E?labelColor=0d1117" alt="MIT License"></a>
+</p>
+
+</div>
 
 Runtime mods for **My Sexy Neighbour 2** (Steam, Unity 6000.2.2 Mono) built on BepInEx 5.4.23.5 + Harmony. No game files are modified.
 
