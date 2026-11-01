@@ -7,8 +7,9 @@
 # MSN2 Community Patch + Expansion
 
 <p>
-  <a href="https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/latest"><img src="https://img.shields.io/github/v/release/SenjuWoo/MSN2-CommunityPatch?label=release&color=A06A3E&labelColor=0d1117" alt="latest release"></a>
+  <a href="https://github.com/SenjuWoo/MSN2-CommunityPatch/actions/workflows/validate.yml"><img src="https://github.com/SenjuWoo/MSN2-CommunityPatch/actions/workflows/validate.yml/badge.svg" alt="CI"></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-A06A3E?labelColor=0d1117" alt="MIT License"></a>
+  <a href="https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/latest"><img src="https://img.shields.io/github/v/release/SenjuWoo/MSN2-CommunityPatch?label=release&color=A06A3E&labelColor=0d1117" alt="latest release"></a>
 </p>
 
 </div>
