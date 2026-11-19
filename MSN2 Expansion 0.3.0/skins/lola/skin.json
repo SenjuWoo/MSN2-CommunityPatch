@@ -1,0 +1,3365 @@
+{
+ "schema": 1,
+ "id": "lola",
+ "displayName": "Lola",
+ "replaces": "Camila",
+ "body": {
+  "mesh": "body.msnm",
+  "target": "Catara Mesh.001",
+  "slots": {
+   "Body": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1003.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1003_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1003_n.png"
+    }
+   },
+   "Face": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1001.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1001.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1001.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1001_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1001_n.png"
+    }
+   },
+   "Teeth": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1006.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1006.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1006.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1006_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1006_n.png"
+    }
+   },
+   "Head": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1002.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1002.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1002.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1002_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1002_n.png"
+    }
+   },
+   "Legs": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1004.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1004.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1004.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1004_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1004_n.png"
+    }
+   },
+   "Mouth": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1006.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1006.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1006.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1006_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1006_n.png"
+    }
+   },
+   "Arms": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1005.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1005.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1005.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1005_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1005_n.png"
+    }
+   },
+   "Pupils": {
+    "template": "Eyes",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1007.01.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1007.01.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1007.01.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1007_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1007_n.png"
+    }
+   },
+   "EyeMoisture": {
+    "hide": true
+   },
+   "Genitalia": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1003.png",
+     "_NormalMap": "tex/HM-Luna_Normal.1003_n.png",
+     "_BumpMap": "tex/HM-Luna_Normal.1003_n.png"
+    }
+   },
+   "Anus": {
+    "template": "Body",
+    "tex": {
+     "_DiffuseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_BaseMap": "tex/HM-Luna_BaseColor.1003.png",
+     "_MainTex": "tex/HM-Luna_BaseColor.1003.png"
+    }
+   },
+   "Eyelashes_UP": {
+    "template": "Eyelashes",
+    "tex": {}
+   },
+   "Tear": {
+    "hide": true
+   },
+   "Luna_Brows": {
+    "template": "Eyelashes",
+    "tex": {
+     "_BaseMap": "tex/brows_d.png",
+     "_BumpMap": "tex/brows_n_n.png",
+     "_MainTex": "tex/brows_d.png"
+    }
+   }
+  }
+ },
+ "hair": {
+  "mesh": "hair.msnm",
+  "target": "TG4 Female Hair 07 (Genesis 8 Female)",
+  "slots": {
+   "Bangs-Strands": {
+    "template": "Hair",
+    "tex": {
+     "_AlphaMap": "tex/LLF-KenjiHairStrands.png",
+     "_DiffuseMap": "tex/d2_New_Layered_Image_24.png",
+     "_BaseMap": "tex/d2_New_Layered_Image_24.png",
+     "_MainTex": "tex/d2_New_Layered_Image_24.png",
+     "_HeightMap": "tex/LLF-TB-LongBum2SM.png",
+     "_NormalMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_BumpMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_SpecularMap": "tex/LLF-TB-LongBum2SM.png"
+    },
+    "floats": {
+     "Boolean_31E42672": 1.0,
+     "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+     "Vector1_15291870": 1.0,
+     "Vector1_1D7F566A": 1.0,
+     "Vector1_40B696F5": 1.0,
+     "Vector1_4BB7D640": 0.0,
+     "Vector1_644CECEF": 0.0,
+     "_Alpha": 1.0,
+     "_AlphaClipThreshold": 0.5,
+     "_ClearCoatValue": 0.30000001192092896,
+     "_Clipping": 1.0,
+     "_Dithering": 1.0,
+     "_DualLobeSpecularRatio": 0.0,
+     "_DualLobeSpecularWeight": 0.0,
+     "_EmissionExposureWeight": 0.0,
+     "_EmissionStrength": 0.0,
+     "_GlossyAnisotropy": 0.0,
+     "_GlossyLayeredWeight": 0.0,
+     "_Height": 3.9603960514068604,
+     "_HeightMapStrength": 0.0,
+     "_HeightOffset": 0.25,
+     "_HeightStrength": 0.014000000432133675,
+     "_IndexOfRefraction": 1.5,
+     "_IndexOfRefractionWeight": 0.0,
+     "_Metallic": 0.0,
+     "_Multiply2Opacity": 1.0,
+     "_MultiplyValue": 1.7200000286102295,
+     "_Normal": 0.0,
+     "_NormalStrength": 2.0,
+     "_OpacityMultiplier": 2.700000047683716,
+     "_QueueControl": 0.0,
+     "_QueueOffset": 0.0,
+     "_Roughness": 1.0,
+     "_SpecularLobe1Roughness": 0.0,
+     "_SpecularLobe2Roughness": 0.0,
+     "_SpecularStrength": 0.0,
+     "_SpecularValue": 0.0,
+     "_TopCoatBumpStrength": 0.0,
+     "_TopCoatIOR": 1.5,
+     "_TopCoatNormalStrength": 0.0,
+     "_TopCoatRoughness": 0.5,
+     "_TopCoatWeight": 0.0,
+     "_TranslucencyWeight": 0.0
+    },
+    "colors": {
+     "_Diffuse": [
+      0.5609647631645203,
+      0.5816879868507385,
+      0.6226415038108826,
+      1.0
+     ],
+     "_Emission": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_Offset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_SpecularColor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "_Tiling": [
+      1.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "_TopCoatColor": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "_TranslucencyColor": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "srcShader": "Shader Graphs/Hair"
+   },
+   "Bangs-Hair1": {
+    "template": "Hair",
+    "tex": {
+     "_AlphaMap": "tex/LLF-KenjiHairHair1.png",
+     "_DiffuseMap": "tex/d2_New_Layered_Image_24.png",
+     "_BaseMap": "tex/d2_New_Layered_Image_24.png",
+     "_MainTex": "tex/d2_New_Layered_Image_24.png",
+     "_HeightMap": "tex/LLF-TB-LongBum2SM.png",
+     "_NormalMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_BumpMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_SpecularMap": "tex/LLF-TB-LongBum2SM.png"
+    },
+    "floats": {
+     "Boolean_31E42672": 1.0,
+     "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+     "Vector1_15291870": 1.0,
+     "Vector1_1D7F566A": 1.0,
+     "Vector1_40B696F5": 1.0,
+     "Vector1_4BB7D640": 0.0,
+     "Vector1_644CECEF": 0.0,
+     "_Alpha": 1.0,
+     "_AlphaClipThreshold": 0.5,
+     "_ClearCoatValue": 0.30000001192092896,
+     "_Clipping": 1.0,
+     "_Dithering": 1.0,
+     "_DualLobeSpecularRatio": 0.0,
+     "_DualLobeSpecularWeight": 0.0,
+     "_EmissionExposureWeight": 0.0,
+     "_EmissionStrength": 0.0,
+     "_GlossyAnisotropy": 0.0,
+     "_GlossyLayeredWeight": 0.0,
+     "_Height": 3.9603960514068604,
+     "_HeightMapStrength": 0.0,
+     "_HeightOffset": 0.25,
+     "_HeightStrength": 0.014000000432133675,
+     "_IndexOfRefraction": 1.5,
+     "_IndexOfRefractionWeight": 0.0,
+     "_Metallic": 0.0,
+     "_Multiply2Opacity": 1.0,
+     "_MultiplyValue": 1.7200000286102295,
+     "_Normal": 0.0,
+     "_NormalStrength": 2.0,
+     "_OpacityMultiplier": 2.700000047683716,
+     "_QueueControl": 0.0,
+     "_QueueOffset": 0.0,
+     "_Roughness": 1.0,
+     "_SpecularLobe1Roughness": 0.0,
+     "_SpecularLobe2Roughness": 0.0,
+     "_SpecularStrength": 0.0,
+     "_SpecularValue": 0.0,
+     "_TopCoatBumpStrength": 0.0,
+     "_TopCoatIOR": 1.5,
+     "_TopCoatNormalStrength": 0.0,
+     "_TopCoatRoughness": 0.5,
+     "_TopCoatWeight": 0.0,
+     "_TranslucencyWeight": 0.0
+    },
+    "colors": {
+     "_Diffuse": [
+      0.5609647631645203,
+      0.5816879868507385,
+      0.6226415038108826,
+      1.0
+     ],
+     "_Emission": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_Offset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_SpecularColor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "_Tiling": [
+      1.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "_TopCoatColor": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "_TranslucencyColor": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "srcShader": "Shader Graphs/Hair"
+   },
+   "Bangs-Hair": {
+    "template": "Hair",
+    "tex": {
+     "_AlphaMap": "tex/LLF-KenjiHairHair.png",
+     "_DiffuseMap": "tex/d2_New_Layered_Image_24.png",
+     "_BaseMap": "tex/d2_New_Layered_Image_24.png",
+     "_MainTex": "tex/d2_New_Layered_Image_24.png",
+     "_HeightMap": "tex/LLF-TB-LongBum2SM.png",
+     "_NormalMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_BumpMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_SpecularMap": "tex/LLF-TB-LongBum2SM.png"
+    },
+    "floats": {
+     "Boolean_31E42672": 1.0,
+     "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+     "Vector1_15291870": 1.0,
+     "Vector1_1D7F566A": 1.0,
+     "Vector1_40B696F5": 1.0,
+     "Vector1_4BB7D640": 0.0,
+     "Vector1_644CECEF": 0.0,
+     "_Alpha": 1.0,
+     "_AlphaClipThreshold": 0.5,
+     "_ClearCoatValue": 0.30000001192092896,
+     "_Clipping": 1.0,
+     "_Dithering": 1.0,
+     "_DualLobeSpecularRatio": 0.0,
+     "_DualLobeSpecularWeight": 0.0,
+     "_EmissionExposureWeight": 0.0,
+     "_EmissionStrength": 0.0,
+     "_GlossyAnisotropy": 0.0,
+     "_GlossyLayeredWeight": 0.0,
+     "_Height": 3.9603960514068604,
+     "_HeightMapStrength": 0.0,
+     "_HeightOffset": 0.25,
+     "_HeightStrength": 0.014000000432133675,
+     "_IndexOfRefraction": 1.5,
+     "_IndexOfRefractionWeight": 0.0,
+     "_Metallic": 0.0,
+     "_Multiply2Opacity": 1.0,
+     "_MultiplyValue": 1.7200000286102295,
+     "_Normal": 0.0,
+     "_NormalStrength": 2.0,
+     "_OpacityMultiplier": 2.700000047683716,
+     "_QueueControl": 0.0,
+     "_QueueOffset": 0.0,
+     "_Roughness": 1.0,
+     "_SpecularLobe1Roughness": 0.0,
+     "_SpecularLobe2Roughness": 0.0,
+     "_SpecularStrength": 0.0,
+     "_SpecularValue": 0.0,
+     "_TopCoatBumpStrength": 0.0,
+     "_TopCoatIOR": 1.5,
+     "_TopCoatNormalStrength": 0.0,
+     "_TopCoatRoughness": 0.5,
+     "_TopCoatWeight": 0.0,
+     "_TranslucencyWeight": 0.0
+    },
+    "colors": {
+     "_Diffuse": [
+      0.5609647631645203,
+      0.5816879868507385,
+      0.6226415038108826,
+      1.0
+     ],
+     "_Emission": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_Offset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_SpecularColor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "_Tiling": [
+      1.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "_TopCoatColor": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "_TranslucencyColor": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "srcShader": "Shader Graphs/Hair"
+   },
+   "Bangs-Strands1": {
+    "template": "Hair",
+    "tex": {
+     "_AlphaMap": "tex/LLF-KenjiHairStrands1.png",
+     "_DiffuseMap": "tex/d2_New_Layered_Image_24.png",
+     "_BaseMap": "tex/d2_New_Layered_Image_24.png",
+     "_MainTex": "tex/d2_New_Layered_Image_24.png",
+     "_HeightMap": "tex/LLF-TB-LongBum2SM.png",
+     "_NormalMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_BumpMap": "tex/LLF-TB-NormalsLongSM_n.png",
+     "_SpecularMap": "tex/LLF-TB-LongBum2SM.png"
+    },
+    "floats": {
+     "Boolean_31E42672": 1.0,
+     "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+     "Vector1_15291870": 1.0,
+     "Vector1_1D7F566A": 1.0,
+     "Vector1_40B696F5": 1.0,
+     "Vector1_4BB7D640": 0.0,
+     "Vector1_644CECEF": 0.0,
+     "_Alpha": 1.0,
+     "_AlphaClipThreshold": 0.5,
+     "_ClearCoatValue": 0.30000001192092896,
+     "_Clipping": 1.0,
+     "_Dithering": 1.0,
+     "_DualLobeSpecularRatio": 0.0,
+     "_DualLobeSpecularWeight": 0.0,
+     "_EmissionExposureWeight": 0.0,
+     "_EmissionStrength": 0.0,
+     "_GlossyAnisotropy": 0.0,
+     "_GlossyLayeredWeight": 0.0,
+     "_Height": 3.9603960514068604,
+     "_HeightMapStrength": 0.0,
+     "_HeightOffset": 0.25,
+     "_HeightStrength": 0.014000000432133675,
+     "_IndexOfRefraction": 1.5,
+     "_IndexOfRefractionWeight": 0.0,
+     "_Metallic": 0.0,
+     "_Multiply2Opacity": 1.0,
+     "_MultiplyValue": 1.7200000286102295,
+     "_Normal": 0.0,
+     "_NormalStrength": 2.0,
+     "_OpacityMultiplier": 2.700000047683716,
+     "_QueueControl": 0.0,
+     "_QueueOffset": 0.0,
+     "_Roughness": 1.0,
+     "_SpecularLobe1Roughness": 0.0,
+     "_SpecularLobe2Roughness": 0.0,
+     "_SpecularStrength": 0.0,
+     "_SpecularValue": 0.0,
+     "_TopCoatBumpStrength": 0.0,
+     "_TopCoatIOR": 1.5,
+     "_TopCoatNormalStrength": 0.0,
+     "_TopCoatRoughness": 0.5,
+     "_TopCoatWeight": 0.0,
+     "_TranslucencyWeight": 0.0
+    },
+    "colors": {
+     "_Diffuse": [
+      0.5609647631645203,
+      0.5816879868507385,
+      0.6226415038108826,
+      1.0
+     ],
+     "_Emission": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_Offset": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "_SpecularColor": [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+     ],
+     "_Tiling": [
+      1.0,
+      1.0,
+      0.0,
+      0.0
+     ],
+     "_TopCoatColor": [
+      1.0,
+      1.0,
+      1.0,
+      0.0
+     ],
+     "_TranslucencyColor": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ]
+    },
+    "srcShader": "Shader Graphs/Hair"
+   }
+  }
+ },
+ "extra": [
+  {
+   "mesh": "scalp.msnm",
+   "name": "Lola_Scalp",
+   "slots": {
+    "Scalp": {
+     "template": "Hair",
+     "tex": {
+      "_AlphaMap": "tex/LLF-KenjiScalpT1.png",
+      "_DiffuseMap": "tex/d2_New_Layered_Image_24.png",
+      "_BaseMap": "tex/d2_New_Layered_Image_24.png",
+      "_MainTex": "tex/d2_New_Layered_Image_24.png",
+      "_HeightMap": "tex/LLF-KenjiScalpT1.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.09000000357627869,
+      "_ClearCoatValue": 0.23999999463558197,
+      "_Clipping": 0.15299999713897705,
+      "_Dithering": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 0.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.0,
+      "_Height": 3.9603960514068604,
+      "_HeightMapStrength": 0.0,
+      "_HeightOffset": 0.25,
+      "_HeightStrength": 0.09000000357627869,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 0.0,
+      "_Multiply2Opacity": 1.0,
+      "_MultiplyValue": 1.7200000286102295,
+      "_Normal": 0.0,
+      "_NormalStrength": 2.0,
+      "_OpacityMultiplier": 1.25,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 0.0,
+      "_SpecularValue": 0.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.5,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       0.5609647631645203,
+       0.5816879868507385,
+       0.6226415038108826,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Shader Graphs/Hair"
+    }
+   }
+  }
+ ],
+ "clothes": {
+  "Camila_Casual_TankTop": {
+   "mesh": "clothes/yoshino_shirt.msnm",
+   "slots": {
+    "Jacket_Main": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Outfit_Shirt_BaseColor.png",
+      "_BaseMap": "tex/Outfit_Shirt_BaseColor.png",
+      "_MainTex": "tex/Outfit_Shirt_BaseColor.png",
+      "_HeightMap": "tex/Outfit_Shirt_Height.png",
+      "_NormalMap": "tex/Outfit_Shirt_Normal_n.png",
+      "_BumpMap": "tex/Outfit_Shirt_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.0,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    }
+   }
+  },
+  "Camila_Casual_Shorts": {
+   "mesh": "clothes/yoshino_skirt_belt.msnm",
+   "slots": {
+    "Skirt": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Outfit_Skirt_BaseColor.png",
+      "_BaseMap": "tex/Outfit_Skirt_BaseColor.png",
+      "_MainTex": "tex/Outfit_Skirt_BaseColor.png",
+      "_HeightMap": "tex/Outfit_Skirt_Height.png",
+      "_NormalMap": "tex/Outfit_Skirt_Normal_n.png",
+      "_BumpMap": "tex/Outfit_Skirt_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.0,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    },
+    "Loops": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Outfit_Belt_BaseColor.png",
+      "_BaseMap": "tex/Outfit_Belt_BaseColor.png",
+      "_MainTex": "tex/Outfit_Belt_BaseColor.png",
+      "_HeightMap": "tex/Outfit_Belt_Height.png",
+      "_NormalMap": "tex/Outfit_Belt_Normal_n.png",
+      "_BumpMap": "tex/Outfit_Belt_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 1.0,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 0.5,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    },
+    "Buckle": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Outfit_Belt_BaseColor.png",
+      "_BaseMap": "tex/Outfit_Belt_BaseColor.png",
+      "_MainTex": "tex/Outfit_Belt_BaseColor.png",
+      "_HeightMap": "tex/Outfit_Belt_Height.png",
+      "_NormalMap": "tex/Outfit_Belt_Normal_n.png",
+      "_BumpMap": "tex/Outfit_Belt_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.14285710453987122,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    }
+   }
+  },
+  "Camila_Casual_Sneakers": {
+   "mesh": "clothes/yoshino_shoes_socks.msnm",
+   "slots": {
+    "Shoe1": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Shoes_Shoes_BaseColor.png",
+      "_BaseMap": "tex/Shoes_Shoes_BaseColor.png",
+      "_MainTex": "tex/Shoes_Shoes_BaseColor.png",
+      "_HeightMap": "tex/Shoes_Shoes_Height.png",
+      "_NormalMap": "tex/Shoes_Shoes_Normal_n.png",
+      "_BumpMap": "tex/Shoes_Shoes_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.20000000298023224,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    },
+    "Sock1": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Socks_Socks_BaseColor.png",
+      "_BaseMap": "tex/Socks_Socks_BaseColor.png",
+      "_MainTex": "tex/Socks_Socks_BaseColor.png",
+      "_HeightMap": "tex/Socks_Socks_Height.png",
+      "_NormalMap": "tex/Socks_Socks_Normal_n.png",
+      "_BumpMap": "tex/Socks_Socks_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.0,
+      "_Height": 2.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       0.6784313917160034,
+       0.6784313917160034,
+       0.6784313917160034,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    }
+   }
+  },
+  "Camila_Nightie_Nightie": {
+   "mesh": "clothes/nightie.msnm",
+   "slots": {
+    "Ruffles_01": {
+     "template": "@garment",
+     "tex": {
+      "_AlphaMap": "tex/Sweet_Brami_opac01.png",
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Transparent"
+    },
+    "Elastic_03": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "StrapElastic_03": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "StrapElastic_04": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "StrapElastic_02": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "StrapElastic_01": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Ruffles_LStrap": {
+     "template": "@garment",
+     "tex": {
+      "_AlphaMap": "tex/Sweet_Brami_opac01.png",
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Transparent"
+    },
+    "Elastic_LStrap": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Ruffles_RStrap": {
+     "template": "@garment",
+     "tex": {
+      "_AlphaMap": "tex/Sweet_Brami_opac01.png",
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Transparent"
+    },
+    "Elastic_RStrap": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Breast_body": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Elastic_breast": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Ruffles_02": {
+     "template": "@garment",
+     "tex": {
+      "_AlphaMap": "tex/Sweet_Brami_opac01.png",
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Transparent"
+    },
+    "Elastic_01": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Elastic_02": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Line_straps": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Line_body": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/Sweet_Brami_diff24.png",
+      "_BaseMap": "tex/Sweet_Brami_diff24.png",
+      "_MainTex": "tex/Sweet_Brami_diff24.png",
+      "_HeightMap": "tex/Sweet_Brami_bump01.png",
+      "_NormalMap": "tex/Sweet_Brami_normal01_n.png",
+      "_BumpMap": "tex/Sweet_Brami_normal01_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.44999998807907104,
+      "_Height": 3.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.3300000429153442,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.2068966031074524,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.4000000059604645
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Thong": {
+     "template": "@garment",
+     "tex": {
+      "_AlphaMap": "tex/Underwear_Opacity_Map.png",
+      "_DiffuseMap": "tex/defaultMat_BaseColor.png",
+      "_BaseMap": "tex/defaultMat_BaseColor.png",
+      "_MainTex": "tex/defaultMat_BaseColor.png",
+      "_NormalMap": "tex/defaultMat_Normal_n.png",
+      "_BumpMap": "tex/defaultMat_Normal_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.0,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 1.0,
+      "_Height": 0.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 1.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 1.0,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 1.0,
+      "_TopCoatWeight": 0.5,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Transparent"
+    },
+    "SoleTop": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/TShirtSlipper1.png",
+      "_BaseMap": "tex/TShirtSlipper1.png",
+      "_MainTex": "tex/TShirtSlipper1.png",
+      "_HeightMap": "tex/TShirtSlipper1_B.png",
+      "_NormalMap": "tex/TShirtslipper_NM_n.png",
+      "_BumpMap": "tex/TShirtslipper_NM_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.17735329270362854,
+      "_Height": 3.27421498298645,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 0.0,
+      "_Normal": 1.0,
+      "_QueueControl": 0.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 0.5912699103355408,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 2.0,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.0,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       0.7843137383460999,
+       0.7843137383460999,
+       0.7843137383460999,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.11372549086809158,
+       0.11372549086809158,
+       0.11372549086809158,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Specular"
+    },
+    "Sole_1": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/TShirtSlipper1.png",
+      "_BaseMap": "tex/TShirtSlipper1.png",
+      "_MainTex": "tex/TShirtSlipper1.png",
+      "_HeightMap": "tex/TShirtSlipper1_B.png",
+      "_NormalMap": "tex/TShirtslipper_NM_n.png",
+      "_BumpMap": "tex/TShirtslipper_NM_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.08882995694875717,
+      "_Height": 1.0,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_MakeupEnable": 0.0,
+      "_MakeupRoughnessMultiplierValue": 1.0,
+      "_MakeupWeightValue": 1.0,
+      "_Metallic": 0.0,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 0.7460318207740784,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.126984104514122,
+      "_TopCoatWeight": 0.1726190447807312,
+      "_TranslucencyWeight": 0.60317462682724
+     },
+     "colors": {
+      "_Diffuse": [
+       0.9019607901573181,
+       0.9019607901573181,
+       0.9019607901573181,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_MakeupBaseColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       0.23137255012989044,
+       0.23137255012989044,
+       0.23137255012989044,
+       1.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       1.0,
+       0.9803921580314636,
+       0.9725490212440491,
+       1.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.SSS"
+    },
+    "Slipper": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/TShirtSlipper1.png",
+      "_BaseMap": "tex/TShirtSlipper1.png",
+      "_MainTex": "tex/TShirtSlipper1.png",
+      "_HeightMap": "tex/TShirtSlipper1_B.png",
+      "_NormalMap": "tex/TShirtslipper_NM_n.png",
+      "_BumpMap": "tex/TShirtslipper_NM_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 0.5,
+      "_Height": 9.481582641601562,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 0.20000000298023224,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 0.75,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.25,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       0.43396228551864624,
+       0.43396228551864624,
+       0.43396228551864624,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    },
+    "String": {
+     "template": "@garment",
+     "tex": {
+      "_DiffuseMap": "tex/TShirtSlipper1.png",
+      "_BaseMap": "tex/TShirtSlipper1.png",
+      "_MainTex": "tex/TShirtSlipper1.png",
+      "_HeightMap": "tex/TShirtSlipper1_B.png",
+      "_NormalMap": "tex/TShirtslipper_NM_n.png",
+      "_BumpMap": "tex/TShirtslipper_NM_n.png"
+     },
+     "floats": {
+      "Boolean_31E42672": 1.0,
+      "ROUGHNESS_IS_SMOOTHNESS": 0.0,
+      "Vector1_15291870": 1.0,
+      "Vector1_1D7F566A": 1.0,
+      "Vector1_40B696F5": 1.0,
+      "Vector1_4BB7D640": 0.0,
+      "Vector1_644CECEF": 0.0,
+      "_Alpha": 1.0,
+      "_AlphaClipThreshold": 0.5,
+      "_DualLobeSpecularRatio": 0.0,
+      "_DualLobeSpecularWeight": 0.0,
+      "_EmissionExposureWeight": 1.0,
+      "_EmissionStrength": 0.0,
+      "_GlossyAnisotropy": 0.0,
+      "_GlossyLayeredWeight": 1.0,
+      "_Height": 3.27421498298645,
+      "_HeightOffset": 0.25,
+      "_IndexOfRefraction": 1.5,
+      "_IndexOfRefractionWeight": 0.0,
+      "_Metallic": 0.6600000262260437,
+      "_Normal": 1.0,
+      "_QueueControl": 1.0,
+      "_QueueOffset": 0.0,
+      "_Roughness": 0.15000000596046448,
+      "_SpecularLobe1Roughness": 0.0,
+      "_SpecularLobe2Roughness": 0.0,
+      "_SpecularStrength": 1.0,
+      "_TopCoatBumpStrength": 0.0,
+      "_TopCoatIOR": 1.5,
+      "_TopCoatNormalStrength": 0.0,
+      "_TopCoatRoughness": 0.25,
+      "_TopCoatWeight": 0.0,
+      "_TranslucencyWeight": 0.0
+     },
+     "colors": {
+      "_Diffuse": [
+       0.7372549176216125,
+       0.8509804010391235,
+       0.9450980424880981,
+       1.0
+      ],
+      "_Emission": [
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "_Offset": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "_SpecularColor": [
+       1.0,
+       1.0,
+       1.0,
+       0.0
+      ],
+      "_Tiling": [
+       1.0,
+       1.0,
+       0.0,
+       0.0
+      ],
+      "_TopCoatColor": [
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "_TranslucencyColor": [
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ]
+     },
+     "srcShader": "Daz3D/uDTU URP.Metallic"
+    }
+   }
+  }
+ },
+ "blendshapeAliases": {},
+ "portraits": {
+  "Portrait": "portrait.png",
+  "Portrait2": "portrait2.png",
+  "Cond0": "portrait_cond0.png",
+  "Cond1": "portrait_cond1.png",
+  "Cond2": "portrait_cond2.png",
+  "Cond3": "portrait_cond3.png",
+  "Cond4": "portrait_cond4.png",
+  "Cond5": "portrait_cond5.png"
+ }
+}

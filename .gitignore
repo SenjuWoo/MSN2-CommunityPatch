@@ -5,3 +5,4 @@ dist/
 **/obj/
 *.user
 backups/
+__pycache__/

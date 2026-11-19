@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.3.0 — 2026-11-19
+Parent: 0.2.2. Goal: Lola from My Sexy Neighbor replaces Camila (PLAN.md 0.3.0).
+- New plugin **MSN2 Characters** (`senjuwoo.msn2.characters`, optional): data-driven skins in `plugins/MSN2/skins/<id>/` (`skin.json` + `.msnm` meshes + PNG textures). `[Skins] Camila = lola`. Visual only: `ActorID.Camila`, saves, FSMs, schedules, sex scenes and photos are unchanged; removing the DLL restores Camila
+- Lola: MSN1 body (14 material slots, 110 shapes incl. FACS face and genital morphs + 4 aliases for Camila-only morphs), hair, scalp, casual outfit (shirt / plaid skirt + belt / shoes + socks), night outfit (brami + thong + slippers); re-bound onto Camila's 149-bone skeleton; Camila's materials cloned with Lola's textures
+- Name: every spelling of Camila's name (localization key, translation, enum) reads "Lola" in translated text, texts already on screen and the house HUD; house HUD (6 alert levels), phone and timetable portraits are renders of Lola
+- Converter `tools/charport/convert_skin.py` (UnityPy, offline) + `msnm.py` (format writer/reader/self-test): translation-only conform onto the target joints (Genitals/Anus take the pelvis offset, merged toes take their counterpart's offset, hair physics bones follow their nearest mapped ancestor), MSN1 default-on shapes baked, DXT5nm normals rebuilt as RGB, manifest with sha256
+- Expansion: journal, tracker, dialogue and notifications show a skin's display name (`ActorNames`, soft dependency)
+- New dev commands (Characters, agent bridge): `skin info|reload|off|mats`, `wear <Actor> <Pack>`, `blend <Actor>`, `look <Actor> ...` (temporary camera render), `portrait <Actor>`, `spritedump <Actor>`, `actor <Name> info|activate`, `fsm <Actor> <FSMID|timetable|stop>`, `beds`
+
 ## 0.2.2 — 2026-11-19
 Parent: 0.2.1. Goal: maintenance after a workspace recovery: runtime re-check on game build 21130045, measured performance pass, test-gap closure, reproducible builds.
 - Perf (Patch): `[Performance] AnimatorCulling` (default on): about 335 prop animators (drawers, cabinets, windows, wardrobe doors, traps) use `CullUpdateTransforms` and stop posing while off screen; characters, cameras, UI and nav-mesh doors are excluded. A/B at High: +3.7% average FPS, +20% 1% lows; off-screen pose, wardrobe/door fling, trap and NPC warp regressions pass

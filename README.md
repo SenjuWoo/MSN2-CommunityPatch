@@ -20,15 +20,22 @@ Runtime mods for **My Sexy Neighbour 2** (Steam, Unity 6000.2.2 Mono) built on B
 |---|---|
 | **MSN2 Community Patch** | Fixes the per-frame HUD exception (+23% FPS measured), the 60 FPS cap on Medium/Low, NPCs freezing on ignored interrupts, the Low preset light budget, the wardrobe interaction that threw the player off the map at low FPS, and theft spawn points inside furniture; adds graphics options, **key remapping** on Settings > Controls and off-screen animator culling. |
 | **MSN2 Expansion** | MSN1-style story jobs: journal, objective tracker, dialogue, main goals + Souvenir / Hidden-Cam / Shadow / Timed bonuses, chained jobs, JSON job packs, saves beside the game save. Ships the 5-job *Neighbourhood Classics* pack. |
+| **MSN2 Characters** (optional) | **Lola from the first game replaces Camila**: body, face, hair, outfits, name and portraits. Visual only, so schedules, scenes and saves are untouched; delete the DLL and Camila is back. |
+
+## Lola replaces Camila (optional plugin)
+`MSN2_Characters_v<ver>.zip` adds `MSN2Characters.dll` and `skins/lola/`. Lola's MSN1 meshes are re-bound onto Camila's skeleton at runtime and wear clones of Camila's own materials with Lola's textures, so every Camila animation, sex scene and photo works unchanged. Turn it off with `[Skins] Camila =` (empty) in `BepInEx\config\senjuwoo.msn2.characters.cfg`. The skin data is generated from the first game with `tools/charport/convert_skin.py`; only `skin.json` lives in git.
 
 Players: download the zips from [Releases](../../releases) and extract into the game folder. In-zip readmes cover keys, settings and logs (`BepInEx\LogOutput.log`).
 
 ## Repository layout
 ```
 CURRENT.txt                    active snapshot folder
-MSN2 Expansion 0.2.2/
+MSN2 Expansion 0.3.0/
   src/MSN2CommunityPatch       patch plugin
   src/MSN2Expansion            expansion framework plugin
+  src/MSN2Characters           optional skins plugin (Lola replaces Camila)
+  skins/lola/skin.json         skin definition (meshes/textures are generated, not in git)
+  tools/charport/              MSN1 -> MSN2 character converter (UnityPy) + .msnm format
   packs/                       job packs (docs/PACK_FORMAT.md)
   tools/                       build / install / launch / agent / package scripts
   MODDING_PLAN.md              verified recon of the game
@@ -42,10 +49,10 @@ MAP.md                         full project map: code, runtime paths, tools, rel
 Needs the game installed (assemblies are referenced from its `Managed` folder, never committed), .NET SDK 8+, and BepInEx 5.4.23.5 extracted to `vendor/BepInEx_5.4.23.5` (gitignored).
 ```powershell
 $env:MSN2_GAME_DIR = 'D:\Steam\steamapps\common\My sexy Neighbour 2'   # only if not S:\SteamLibrary\steamapps\common\My sexy Neighbour 2 (tools/common.ps1 default)
-& '.\MSN2 Expansion 0.2.2\tools\build.ps1'
-& '.\MSN2 Expansion 0.2.2\tools\package.ps1' -Version 0.2.2
+& '.\MSN2 Expansion 0.3.0\tools\build.ps1'
+& '.\MSN2 Expansion 0.3.0\tools\package.ps1' -Version 0.3.0
 ```
 `tools/relaunch.ps1` + `tools/agent.ps1` drive the running game for tests (enable `[Debug] AgentBridge` in the patch config).
 
 ## Licence
-MIT (this repository). BepInEx is MIT and bundled unmodified in the patch archive. My Sexy Neighbour 2 belongs to its developers; nothing from the game is included here.
+MIT (this repository). BepInEx is MIT and bundled unmodified in the patch archive. My Sexy Neighbour 2 and My Sexy Neighbor belong to their developers. Nothing from either game is in this repository; the Characters release archive contains Lola's meshes and textures converted from My Sexy Neighbor.

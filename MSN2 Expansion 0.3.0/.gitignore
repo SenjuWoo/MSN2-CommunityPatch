@@ -1,0 +1,3 @@
+# generated skin data ships in the release zip, not git (tools/charport/convert_skin.py)
+skins/*/*
+!skins/*/skin.json

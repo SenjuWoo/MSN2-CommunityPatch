@@ -1,8 +1,21 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.2.2` (CURRENT.txt, released as v0.2.2). Updated 2026-11-19. Project map: MAP.md. Last plan: PLAN.md (0.2.2, all tasks closed).
+Active snapshot: `MSN2 Expansion 0.3.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
 
-**NEXT ACTION: wait for the owner.** 0.2.2 is the stable base. Open: owner's pick for the next features (0.3.0 MSN1 systems per TASKS.md "Next"), the Steam threads newer than 2026-10-13 (hub is login-gated: paste them into TASKS.md "Steam triage 2026-11"), the arrest design question (job progress kept, vanilla resets entities), owner hands-on of Settings > Controls.
+**NEXT ACTION: PLAN.md T11** (release v0.3.0: commit, push, CI on SHA, gh release with 3 zips, asset sha256, alerts, quiet install, save check), then T12 (snapshot 0.4.0 + CUT_CONTENT.md audit).
+
+## 0.3.0 progress (2026-11-19)
+- T01-T10 done (PLAN.md rows + TEST_RESULTS.md 0.3.0). New plugin `MSN2Characters`; skin `lola` generated in `MSN2 Expansion 0.3.0/skins/lola/` (gitignored except skin.json; cache `.build/`). dist/0.3.0 holds 3 zips (Characters 92 MB).
+- Test notes: the test save is day 1, where vanilla keeps Camila/Emma (and the cut NPCs) inactive; `actor <X> activate` + `fsm <X> timetable` drives them. `sex Camila` fails on her own beds at day 1 (NRE in SexController.StartSexAsync); `sex Camila 5` (Chloe's bed index from `beds`) works but leaves her in place. Another session's python process held the GPU at 100 % all session, so FPS numbers are unusable.
+- Evidence screenshots: `backups/evidence/0.3.0/` (local only).
+- Save backup for this session: `backups/saves/20261119-session-0.3.0-start` (save00 41D0F527..., settings 9BF3B481...).
+
+## 0.3.0 planning recon (in progress, 2026-11-19)
+- Tools: UnityPy 1.25.4 in `vendor/pyenv` (SAFE-TOOLS verdict recorded). Scripts: `research/scripts/index_bundles.py` (done), `research/scripts/dump_actor.py` (crashes in UnityPyBoost native typetree reader: set `UnityPy.helpers.TypeTreeHelper.read_typetree_boost = None` and parse only GameObject/Transform/SkinnedMeshRenderer, skip MonoBehaviours). AssetRipper GUI in Reverse-this sandbox; ilspycmd via `Reverse-this\sandbox\bin\ilspycmd.cmd`. Unity editor installed: 6000.6.8f1 only (game is 6000.2.2f1).
+- MSN2 cut content (index `research/msn2_index.json`): ActorID has Jamal, Peter, Yuka beyond the 4 live girls. All three still ship in main bundle `839cebfd…bundle` (2.4 GB): `YukaAI Variant` (pid 7976), `JamalAI  Variant` (21244), `PeterAI Variant` (3475), plus `CamilaAI Variant` (5835); per-actor FSM graphs (sleep/eat/bath/toilet/homework/clothes/sex), TimeTable SOs, DataSOs, ClothesSOs, 9 voice clips each (Jamal/Peter), clothes prefabs in own bundles (Yuka Maid/Bunnysuit/Underwear, Jamal/Peter Casual/Underwear), Yuka spawn zones in Emma's house (servant room, corridor, laundry). Couple scenes in data: Emma_Sex_Peter, Emma_Lesbi_Yuka, Jamal_Sex_Pillary/Bedroom_BJ, Yuka masturbation, GynChair (Peter, Yuka). Letters enum has a full story set (Government/Club/Mom, endings Police/Club/True). Still unknown: whether the variants carry body meshes (next: dump hierarchy).
+- Characters are Daz3D (namespace `Daz3D`, `ActorMeshRenderer`); MSN1 likely Daz too → bone-name match may make a mesh swap onto Camila's rig feasible (verify).
+- MSN1 (decompiled to `research/msn1/decompiled`, 505 files; asset index running → `research/msn1_index.json`): girls **LOLA**, **NATALI** (males TUCKER, MARK, plus CAT). Systems: Althar/souvenirs, Safe (+view), Lockpicking, Telescope, Weather (RainMaker), Bar minigame, Window opener, Mounting, Statistics, Sex gallery + static gallery, Difficulty levels, Missions/briefing/quest panel, outfits (Casual, Nude, NudeTowel, Topless, Swimsuit, Naked_Blindfold, Leopardish, Topless_transp_panties), DynamicBone, PINK_DILDO items.
+- Owner decision needed: Camila → Lola or Natali (show portraits extracted from MSN1 first).
 
 ## Recovery 2026-11-19 (third: local workspace lost)
 - Found: the owner folder held only the two extracted v0.2.1 release zips (sha256-identical to the GitHub assets). git checkout, `research/`, `vendor/`, `backups/`, `dist/` were gone; the game folder was vanilla (files re-downloaded 2026-10-27, buildid still 21130045, no BepInEx).

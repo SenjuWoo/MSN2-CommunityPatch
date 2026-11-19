@@ -1,22 +1,23 @@
 # MAP — where everything is (read this before touching code)
 
-Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.2.2). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2. Older snapshots are frozen rollback copies, never edit them.
+Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.3.0). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2, 0.3.0. Older snapshots are frozen rollback copies, never edit them.
 
 ## Folders
 | Path | Tracked | What |
 |---|---|---|
-| `MSN2 Expansion 0.2.2/` | yes | active code, tools, docs, packs |
-| `MSN2 Expansion 0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions |
+| `MSN2 Expansion 0.3.0/` | yes | active code, tools, docs, packs, `skins/<id>/skin.json` (generated skin data is gitignored) |
+| `MSN2 Expansion 0.2.2/`, `0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions (0.2.2 also holds the archived `PLAN-0.2.2.md`) |
+| `PLAN.md` (root) | yes | current plan (0.3.0-0.5.0) |
 | `.github/` (root) | yes | CI (`validate.yml`), Dependabot |
 | `WORKSPACE_OWNERSHIP.md`, `LICENSE`, `.gitattributes` (root) | yes | ownership rules, MIT licence, CRLF for .cs/.ps1 |
 | `research/` | no (gitignored) | decompiled game code, audits, review dumps, RECOVERED_BRIEF.md |
 | `vendor/` | no | BepInEx 5.4.23.5 (unzipped + zip) |
 | `dist/<version>/` | no | release zips to upload |
-| `backups/` | no | `devcfg` dev configs, `saves` automatic save backups, `test-end-state` |
+| `backups/` | no | `devcfg` dev configs, `saves` automatic save backups, `evidence/<ver>` test screenshots, `test-end-state` |
 
 Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `BepInEx/plugins/MSN2/`, plus `BepInEx/MSN2/agent/` for the test bridge.
 
-## Code (in `MSN2 Expansion 0.2.2/src/`)
+## Code (in `MSN2 Expansion 0.3.0/src/`)
 **MSN2CommunityPatch** (no game files, Harmony + BepInEx)
 - `Plugin.cs`: entry, config binds, applies each fix in isolation (`TryApply`).
 - `Fixes/HouseHudFix.cs`: house HUD null exception + portraits + zone handlers.
@@ -40,7 +41,18 @@ Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `
 - `ExpansionHud.cs`: journal, tracker, dialogue, notifications (UGUI in the game's TMP font).
 - `AgentCommands.cs`: test commands for the bridge (`mx`, `snap`, `steal`, `cam <House> [Room]`, `key`, `sex`, `fap`, `calm`, `addhours`).
 
+- `ActorNames.cs`: shows a skin's display name in job text (reads `MSN2Characters.Skins.SkinApplier.DisplayNames` by reflection).
+
 Packs: `packs/neighbourhood-classics/pack.json` (5 jobs). Format: `docs/PACK_FORMAT.md`.
+
+**MSN2Characters** (optional; GUID `senjuwoo.msn2.characters`; compiles against the game's own mscorlib because Unity 6 APIs have Span overloads)
+- `Plugin.cs`: config `[Skins] Camila = lola`; `CharactersRuntime` loads packs from the main menu on and applies them once the Game scene's `EntitiesController` has the actor.
+- `Skins/MsnmReader.cs`: `.msnm` v1 parser (worker thread) + `Mesh` builder. Format spec: `tools/charport/msnm.py`.
+- `Skins/SkinPack.cs`: `skin.json` model, loading (one texture/mesh per frame, normal maps `_n.png` linear, Repeat wrap for UDIM tiles), portrait sprites.
+- `Skins/SkinApplier.cs`: body swap on the actor's `ActorSkinnedMeshRenderer` (bones by name), extra renderers (hair, scalp) beside it, garments via a postfix on `ClothesController.AttachClothing`, materials cloned from Camila's (`template`), identity (portraits incl. 6 `ConditionalPortraits`, name rewrite in `LocalizationManager.Translate` + one sweep of existing TMP texts), full revert.
+- `CharacterAgent.cs`: test commands (`skin`, `wear`, `blend`, `look`, `portrait`, `spritedump`, `actor`, `fsm`, `beds`).
+
+Skins: `skins/lola/skin.json` (git) + generated `body.msnm`, `hair.msnm`, `scalp.msnm`, `clothes/*.msnm`, `tex/*.png`, `portrait*.png`, `manifest.json` (release zip only). Rebuild: `vendor/pyenv/Scripts/python.exe -I tools/charport/convert_skin.py --msn1 "<MSN1>/My Sexy Neighbor_Data" --msn2 "<MSN2>/My Sexy Neighbour 2_Data" --out skins/lola` (cache in `skins/lola/.build`), then `portrait Camila` in game and copy `portrait*.png` into the skin folder.
 
 ## Runtime paths (player machine)
 - Logs: `<game>\BepInEx\LogOutput.log` (first stop for every bug report).
@@ -51,8 +63,9 @@ Packs: `packs/neighbourhood-classics/pack.json` (5 jobs). Format: `docs/PACK_FOR
 
 ## Tools (`<active snapshot>/tools/`)
 Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\SteamLibrary\steamapps\common\My sexy Neighbour 2`).
-- `build.ps1 [-Configuration Release]`: builds both plugins against the game's `Managed` DLLs.
-- `package.ps1 -Version X.Y.Z`: build, then writes `dist/X.Y.Z/` (two zips, payload only).
+- `build.ps1 [-Configuration Release]`: builds the three plugins against the game's `Managed` DLLs.
+- `package.ps1 -Version X.Y.Z`: build, then writes `dist/X.Y.Z/` (three zips, payload only; Characters zip carries `skins/` without `.build`).
+- `charport/convert_skin.py`, `charport/msnm.py`, `charport/bone_map_msn1_to_msn2.json`: offline character converter (Python venv `vendor/pyenv`, UnityPy).
 - `install.ps1` / `uninstall.ps1` / `launch.ps1` / `relaunch.ps1 [-Config @{...}]`: game folder install and launch (launch backs up `*.dat`).
 - `agent.ps1 <command>`: test bridge (commands list in STATE.md). `focus.ps1`: needed before injected keys.
 - `validate-packs.mjs <packs dir>`: pack validator, run in CI (`node` only; WindowsApps `python3` hangs).
@@ -63,7 +76,7 @@ Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\Steam
 3. `package.ps1 -Version X.Y.Z`. Check zip listing: payload only (BepInEx core, plugin DLLs, docs, packs).
 4. Update `CURRENT.txt`, root `CHANGELOG.md`, `docs/release/CHANGELOG.txt`.
 5. Commit, push `main`, wait for CI on that exact SHA (validate + CodeQL).
-6. `gh release create vX.Y.Z --target <sha>` with both zips. Notes go in a file, not process substitution (fails on Windows).
+6. `gh release create vX.Y.Z --target <sha>` with all zips. Notes go in a file, not process substitution (fails on Windows).
 7. Download assets, compare SHA256 with `dist/`. Check Dependabot, code-scanning and secret-scanning alerts (0 required). A failed query = unknown.
 8. Changelog for Nexus/LoversLab/Undertow: copy the two top blocks of `docs/release/CHANGELOG.txt`.
 `gh` works as SenjuWoo (`gh api user -q .login`). The keyring label "ShugokiFable" is only a label.
