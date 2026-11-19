@@ -2,9 +2,10 @@
 
 Active snapshot: `MSN2 Expansion 0.3.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
 
-**NEXT ACTION: PLAN.md T11** (release v0.3.0: commit, push, CI on SHA, gh release with 3 zips, asset sha256, alerts, quiet install, save check), then T12 (snapshot 0.4.0 + CUT_CONTENT.md audit).
+**NEXT ACTION: PLAN.md T12** (snapshot 0.4.0 + CUT_CONTENT.md audit). T13 finding already known: `HouseOpenerController.OpenHouse/CloseHouse` activates `HouseZone.Residents`; the cut NPCs are not in any Residents list.
 
-## 0.3.0 progress (2026-11-19)
+## 0.3.0 released (2026-11-19)
+- https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.3.0 (tag @ 5136fd3; validate + CodeQL green; alerts 0/0/0). Assets sha256: CommunityPatch 10A2884F87F4098E3C9014F145DB2213CC18758C74C22C196E1AB1B91FAA2788, Expansion 78634C8253F282B38A2BA85A60279210CFFF88055CF285F2E3D3ED90C2A694E1, Characters E65FB686C6E6092622C875F1AD445F4AFFCE70E657AD57BC8BA6388978FAAD10 (downloaded = dist). DLLs 9584bba1 / d03de8da / 8c7ec1e9 (fresh clone identical). Game folder: quiet install of 0.3.0; save00 byte-identical to session start, settings.dat restored.
 - T01-T10 done (PLAN.md rows + TEST_RESULTS.md 0.3.0). New plugin `MSN2Characters`; skin `lola` generated in `MSN2 Expansion 0.3.0/skins/lola/` (gitignored except skin.json; cache `.build/`). dist/0.3.0 holds 3 zips (Characters 92 MB).
 - Test notes: the test save is day 1, where vanilla keeps Camila/Emma (and the cut NPCs) inactive; `actor <X> activate` + `fsm <X> timetable` drives them. `sex Camila` fails on her own beds at day 1 (NRE in SexController.StartSexAsync); `sex Camila 5` (Chloe's bed index from `beds`) works but leaves her in place. Another session's python process held the GPU at 100 % all session, so FPS numbers are unusable.
 - Evidence screenshots: `backups/evidence/0.3.0/` (local only).
