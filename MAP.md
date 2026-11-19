@@ -1,12 +1,12 @@
 # MAP — where everything is (read this before touching code)
 
-Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt`. Released: 0.1.0, 0.2.0. Older snapshots are frozen rollback copies, never edit them.
+Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.2.2). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2. Older snapshots are frozen rollback copies, never edit them.
 
 ## Folders
 | Path | Tracked | What |
 |---|---|---|
-| `MSN2 Expansion 0.2.1/` | yes | active code, tools, docs, packs |
-| `MSN2 Expansion 0.1.0/` | yes | frozen copy of the released 0.1.0 |
+| `MSN2 Expansion 0.2.2/` | yes | active code, tools, docs, packs |
+| `MSN2 Expansion 0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions |
 | `.github/` (root) | yes | CI (`validate.yml`), Dependabot |
 | `WORKSPACE_OWNERSHIP.md`, `LICENSE`, `.gitattributes` (root) | yes | ownership rules, MIT licence, CRLF for .cs/.ps1 |
 | `research/` | no (gitignored) | decompiled game code, audits, review dumps, RECOVERED_BRIEF.md |
@@ -16,7 +16,7 @@ Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURREN
 
 Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `BepInEx/plugins/MSN2/`, plus `BepInEx/MSN2/agent/` for the test bridge.
 
-## Code (in `MSN2 Expansion 0.2.1/src/`)
+## Code (in `MSN2 Expansion 0.2.2/src/`)
 **MSN2CommunityPatch** (no game files, Harmony + BepInEx)
 - `Plugin.cs`: entry, config binds, applies each fix in isolation (`TryApply`).
 - `Fixes/HouseHudFix.cs`: house HUD null exception + portraits + zone handlers.
@@ -26,8 +26,9 @@ Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `
 - `Controls/KeyBindings.cs`: rebinding core, saved to `BepInEx/config/senjuwoo.msn2.bindings.json`.
 - `Controls/ControlsPage.cs`: Settings > Controls UI rows + HUD hint sync.
 - `Graphics/GraphicsTuner.cs`: VSync/FPS cap every frame, URP quality overrides, graphics options.
+- `Graphics/PerfTweaks.cs`: `[Performance]` AnimatorCulling (prop animators -> CullUpdateTransforms; characters, cameras, UI, NavMeshObstacle doors excluded) and SmallObjectShadows; applied once per Game-scene load from `SceneRuntime`, reverted exactly when switched off.
 - Diagnostics (off by default): `FrameMonitor`, `PlayerLoopTimer`, `ScriptProfiler`, `SceneStats`, `MarkerRecorder`.
-- Test bridge (off by default): `AgentBridge.cs` (file channel), `AgentWorld`, `AgentAI`, `AgentProbes` (probes for the 0.2.0 fixes).
+- Test bridge (off by default): `AgentBridge.cs` (file channel), `AgentWorld`, `AgentAI`, `AgentProbes` (probes for the 0.2.0 fixes; `perf`, `perfscan`, `cfg`, `offscreen`, `pad` since 0.2.2).
 
 **MSN2Expansion** (job framework)
 - `ExpansionPlugin.cs`: entry, config (keys J/Enter/,/., tracker toggle, VerboseLog).
@@ -37,7 +38,7 @@ Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `
 - `Sidecar.cs`: job progress in `saveNN.msn2x.json` beside the vanilla save (atomic write, schema field, `.bad` on unreadable).
 - `Souvenirs.cs`: places stealable souvenirs on free theft points (`childCount == 0`). Without the patch, it can pick the 12 bad spots.
 - `ExpansionHud.cs`: journal, tracker, dialogue, notifications (UGUI in the game's TMP font).
-- `AgentCommands.cs`: test commands for the bridge.
+- `AgentCommands.cs`: test commands for the bridge (`mx`, `snap`, `steal`, `cam <House> [Room]`, `key`, `sex`, `fap`, `calm`, `addhours`).
 
 Packs: `packs/neighbourhood-classics/pack.json` (5 jobs). Format: `docs/PACK_FORMAT.md`.
 
@@ -48,7 +49,7 @@ Packs: `packs/neighbourhood-classics/pack.json` (5 jobs). Format: `docs/PACK_FOR
 - Saves: `%USERPROFILE%\AppData\LocalLow\DefaultCompany\My Sexy Neighbour 2\` (`save00.dat` vanilla, `save00.msn2x.json` expansion sidecar). The vanilla save is never written by the expansion.
 - Agent channel (dev only): `BepInEx\MSN2\agent\cmd.txt` in, `out\<id>.json` out.
 
-## Tools (`MSN2 Expansion 0.2.0/tools/`)
+## Tools (`<active snapshot>/tools/`)
 Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\SteamLibrary\steamapps\common\My sexy Neighbour 2`).
 - `build.ps1 [-Configuration Release]`: builds both plugins against the game's `Managed` DLLs.
 - `package.ps1 -Version X.Y.Z`: build, then writes `dist/X.Y.Z/` (two zips, payload only).
@@ -70,7 +71,8 @@ Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\Steam
 ## Known non-bugs / dead ends (do not re-investigate without new evidence)
 - NPC schedule teleports: not reproduced over 5 accelerated days (only Chloe's webcam FSM hops). Use `warplog` with a save that shows it.
 - Gallery sex scenes: the feature does not exist in MSN2.
-- `sex` and `cum_on` hooks: subscribed, never triggered in a test; no shipped job uses them.
+- `sex` and `cum_on` hooks: verified in 0.2.2 (agent `sex` / `fap`). An NPC's root capsule, which the game's fap code credits, is off in many FSM states (alert, webcam, bath); that is vanilla.
+- Shared PC: other sessions' GPU jobs (AssetForge, Minecraft) skew FPS; check `nvidia-smi` before measuring and A/B inside one session (`cfg` toggles).
 - Game time: `GameTimeController` multiplies by timeScale twice (timescale N = N² speed).
 - Injected keys ignored while the game window is unfocused (use `focus.ps1`).
 - Computer-use control of the game was declined by the owner; use the agent bridge.

@@ -1,0 +1,397 @@
+{
+  "id": "neighbourhood-classics",
+  "name": "Neighbourhood Classics",
+  "version": "0.1.0",
+  "author": "SenjuWoo",
+  "minFramework": "0.1.0",
+  "missions": [
+    {
+      "id": "nc01_old_habits",
+      "title": "Old Habits",
+      "giver": "The Collector",
+      "description": "An anonymous big spender wants real jobs again: a client, a target, a plan. First test: Chloe, right next door.",
+      "unlock": {
+        "minDay": 1,
+        "fromHour": 8,
+        "toHour": 23
+      },
+      "intro": [
+        {
+          "speaker": "The Collector",
+          "text": "Saw your little channel. Cute. Amateur, but cute."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Back in the day this was a craft. A client, a target, a plan. Let's do it properly."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Chloe. Next door. I want a photo of her inside her own house. Bring me something of hers and I pay extra."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "photo",
+          "text": "Photograph Chloe inside her house",
+          "type": "photo",
+          "actor": "Chloe",
+          "house": "ChloeHouse"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "souvenir",
+          "text": "Souvenir: steal one of Chloe's hair ties",
+          "type": "steal",
+          "house": "ChloeHouse",
+          "reward": {
+            "money": 75
+          },
+          "item": "HairElastic",
+          "spawn": true
+        },
+        {
+          "id": "cam",
+          "text": "Hide a camera in Chloe's house",
+          "type": "hidden_camera",
+          "house": "ChloeHouse",
+          "reward": {
+            "money": 75,
+            "subscribers": 25
+          }
+        },
+        {
+          "id": "shadow",
+          "text": "Shadow: nobody raises the alarm",
+          "type": "no_alert",
+          "reward": {
+            "money": 100
+          }
+        },
+        {
+          "id": "timed",
+          "text": "Finish within 4 hours",
+          "type": "within_hours",
+          "hours": 4,
+          "reward": {
+            "money": 50
+          }
+        }
+      ],
+      "reward": {
+        "money": 250,
+        "subscribers": 150
+      },
+      "outro": [
+        {
+          "speaker": "The Collector",
+          "text": "Not bad. Shaky frame, but the subject is... inspiring."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Get some sleep. I'll have something wetter for you soon."
+        }
+      ]
+    },
+    {
+      "id": "nc02_steam_room",
+      "title": "Steam Room",
+      "giver": "The Collector",
+      "description": "Chloe showers like nobody's watching. Fix that.",
+      "unlock": {
+        "after": [
+          "nc01_old_habits"
+        ],
+        "minDay": 1,
+        "fromHour": 6,
+        "toHour": 24
+      },
+      "intro": [
+        {
+          "speaker": "The Collector",
+          "text": "Our girl next door takes long showers. Hot ones."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Catch her in there. Naked, wet, unaware. And I collect bathroom trinkets, if you're feeling brave."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "shower",
+          "text": "Photograph Chloe in the shower",
+          "type": "photo",
+          "actor": "Chloe",
+          "activity": "Shower"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "naked",
+          "text": "Make sure she's naked in the shot",
+          "type": "photo",
+          "actor": "Chloe",
+          "naked": true,
+          "reward": {
+            "money": 100,
+            "subscribers": 50
+          }
+        },
+        {
+          "id": "souvenir",
+          "text": "Souvenir: steal Chloe's toothbrush",
+          "type": "steal",
+          "item": "Toothbrush",
+          "house": "ChloeHouse",
+          "reward": {
+            "money": 75
+          },
+          "spawn": true
+        },
+        {
+          "id": "shadow",
+          "text": "Shadow: nobody raises the alarm",
+          "type": "no_alert",
+          "reward": {
+            "money": 100
+          }
+        }
+      ],
+      "reward": {
+        "money": 350,
+        "subscribers": 200
+      },
+      "outro": [
+        {
+          "speaker": "The Collector",
+          "text": "Now THAT is content. The fog on the glass is a nice touch."
+        }
+      ]
+    },
+    {
+      "id": "nc03_lady_of_the_house",
+      "title": "Lady of the House",
+      "giver": "The Collector",
+      "description": "Emma runs a big house and keeps a tight schedule. The Collector wants eyes inside her bedroom.",
+      "unlock": {
+        "after": [
+          "nc02_steam_room"
+        ],
+        "minDay": 2,
+        "fromHour": 8,
+        "toHour": 23,
+        "houses": [
+          "EmmaHouse"
+        ]
+      },
+      "intro": [
+        {
+          "speaker": "The Collector",
+          "text": "Emma. Rich husband, big house, bored eyes."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "I want her bedroom on camera and a picture of her in it. Panties, if you can find them, pay double."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "cam",
+          "text": "Hide a camera in Emma's bedroom",
+          "type": "hidden_camera",
+          "room": "EmmaHouse_Bedroom"
+        },
+        {
+          "id": "photo",
+          "text": "Photograph Emma in her bedroom",
+          "type": "photo",
+          "actor": "Emma",
+          "room": "EmmaHouse_Bedroom"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "souvenir",
+          "text": "Souvenir: steal Emma's panties",
+          "type": "steal",
+          "item": "Panties",
+          "house": "EmmaHouse",
+          "reward": {
+            "money": 150
+          },
+          "spawn": true
+        },
+        {
+          "id": "shadow",
+          "text": "Shadow: nobody raises the alarm",
+          "type": "no_alert",
+          "reward": {
+            "money": 125
+          }
+        },
+        {
+          "id": "timed",
+          "text": "Finish within 6 hours",
+          "type": "within_hours",
+          "hours": 6,
+          "reward": {
+            "money": 75
+          }
+        }
+      ],
+      "reward": {
+        "money": 500,
+        "subscribers": 300
+      },
+      "outro": [
+        {
+          "speaker": "The Collector",
+          "text": "Silk sheets. Of course. You're getting good at this."
+        }
+      ]
+    },
+    {
+      "id": "nc04_caught",
+      "title": "Caught in the Act",
+      "giver": "The Collector",
+      "description": "Traps, bait, patience. Catch one of the neighbours and get the money shot while she's stuck.",
+      "unlock": {
+        "after": [
+          "nc03_lady_of_the_house"
+        ],
+        "minDay": 3,
+        "fromHour": 6,
+        "toHour": 24
+      },
+      "intro": [
+        {
+          "speaker": "The Collector",
+          "text": "Time to get your hands dirty. Set a trap, let one of them walk into it."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Then a photo while she's stuck and helpless. Here's a bucket on the house."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "trap",
+          "text": "Catch a neighbour in a trap",
+          "type": "trap"
+        },
+        {
+          "id": "photo",
+          "text": "Photograph her while she's trapped",
+          "type": "photo",
+          "activity": "Trapped"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "bucket",
+          "text": "Use a bucket trap",
+          "type": "trap",
+          "trap": "Bucket",
+          "reward": {
+            "money": 100
+          }
+        },
+        {
+          "id": "shadow",
+          "text": "Shadow: nobody raises the alarm",
+          "type": "no_alert",
+          "reward": {
+            "money": 150
+          }
+        }
+      ],
+      "reward": {
+        "money": 600,
+        "subscribers": 400,
+        "items": {
+          "BucketTrap": 1,
+          "Aphrodisiac": 1
+        }
+      },
+      "outro": [
+        {
+          "speaker": "The Collector",
+          "text": "Beautiful. Helpless looks good on her. There's a little spray in the package. You know what it's for."
+        }
+      ]
+    },
+    {
+      "id": "nc05_red_room",
+      "title": "The Red Room",
+      "giver": "The Collector",
+      "description": "Camila keeps a room upstairs nobody talks about. The Collector wants to see it.",
+      "unlock": {
+        "after": [
+          "nc04_caught"
+        ],
+        "minDay": 3,
+        "fromHour": 8,
+        "toHour": 24,
+        "houses": [
+          "CamilaHouse"
+        ]
+      },
+      "intro": [
+        {
+          "speaker": "The Collector",
+          "text": "Camila. Gym body, locked door upstairs, red lights."
+        },
+        {
+          "speaker": "The Collector",
+          "text": "Get a camera into that red room and catch her working out. Her toys pay extra."
+        }
+      ],
+      "objectives": [
+        {
+          "id": "cam",
+          "text": "Hide a camera in Camila's red room",
+          "type": "hidden_camera",
+          "room": "CamilaHouse_RedRoom"
+        },
+        {
+          "id": "gym",
+          "text": "Photograph Camila exercising",
+          "type": "photo",
+          "actor": "Camila",
+          "activity": "Exercise"
+        }
+      ],
+      "bonus": [
+        {
+          "id": "souvenir",
+          "text": "Souvenir: steal one of Camila's toys",
+          "type": "steal",
+          "item": "Buttplug",
+          "house": "CamilaHouse",
+          "reward": {
+            "money": 200
+          },
+          "spawn": true
+        },
+        {
+          "id": "shadow",
+          "text": "Shadow: nobody raises the alarm",
+          "type": "no_alert",
+          "reward": {
+            "money": 150
+          }
+        }
+      ],
+      "reward": {
+        "money": 800,
+        "subscribers": 500
+      },
+      "outro": [
+        {
+          "speaker": "The Collector",
+          "text": "Well. That explains the red lights. Same time next week?"
+        }
+      ]
+    }
+  ]
+}

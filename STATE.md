@@ -1,6 +1,13 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.2.1` (CURRENT.txt, released as v0.2.1). Updated 2026-10-13. Project map: MAP.md.
+Active snapshot: `MSN2 Expansion 0.2.2` (CURRENT.txt, in progress; 0.2.1 released and frozen). Updated 2026-11-19. Project map: MAP.md. Work plan: PLAN.md (0.2.2).
+
+**NEXT ACTION: PLAN.md T12** (commit, push, CI on the exact SHA, gh release v0.2.2, verify asset hashes, alerts, install quiet config, restore settings.dat, confirm save00.dat).
+
+## Recovery 2026-11-19 (third: local workspace lost)
+- Found: the owner folder held only the two extracted v0.2.1 release zips (sha256-identical to the GitHub assets). git checkout, `research/`, `vendor/`, `backups/`, `dist/` were gone; the game folder was vanilla (files re-downloaded 2026-10-27, buildid still 21130045, no BepInEx).
+- Done by the planner: `git init` + fetch + `checkout -B main origin/main` in place (main @ f722dfe). Baseline: packs validator PASS, build of both plugins PASS (0 warnings), CI on f722dfe green, alerts 0/0/0. Runtime smoke NOT RUN (PLAN.md T03).
+- Lost for good: decompiled code (regenerate, T02), dev config backups, save backups, RECOVERED_BRIEF.md text (scope survives in "Scope" below).
 
 ## Scope (recovered 2026-10-12 after chat loss; original brief in research/RECOVERED_BRIEF.md)
 Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for performance + bugs (Community Patch). Phase 2 = bring missing My Sexy Neighbor 1 content to MSN2 (Expansion). Runtime-only BepInEx/Harmony; no game files edited; no Unity Editor/MCP (editor 2022.3 ≠ game 6000.2.2).
@@ -26,7 +33,7 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 ## Dev notes
 - Dev config in the game folder is quiet by default now; `relaunch.ps1 -Config @{ AgentBridge='true'; VerboseLog='true' }` switches it on for a session (edits every senjuwoo.msn2.*.cfg that has the key).
 - `tools/focus.ps1` brings the game window to the foreground; injected keys (`agent key`, `hold`, `actiontest`, `jumpkey`) are ignored while the game is unfocused.
-- Agent: `mx`, `snap <Actor>`, `steal`, `cam`, `key <Key>`, `npcs`, `traps`, `tp`, `fps`, `loop`, `profile`, `screenshot`, `ui`, `click <label>`, `settings` (open Settings), `texts <exact text>`, `rects <path suffix>`, `bindings`, `actiontest <Map/Action> <Key..>`, `jumpkey <Key>`, `looking`, `doors`, `doorprobe <i> <closeon|open1|open2|oc_open|oc_closeon>`, `hideprobe [i]`, `lag <ms>`, `stealaudit [i]`, `spotaudit [House] [ids]`, `opennear <i> [r] [name]`, `faceitem <i> [any]`, `facepos x y z`, `nearby <i>`, `freespots`, `warplog start|dump|clear`, `noise x y z [vol]`, `hold <Key> <s>`.
+- Agent (0.2.2 adds `perf [s]`, `perfscan [size]`, `cfg <Section> <Key> [value]`, `offscreen <oc|hide> <i>`, `pad <Map/Action> <control>`, `sex <Actor>`, `fap <Actor> [dist] [pitch] [capsule]`, `calm [Actor]`, `addhours <n>`, `cam <House> [Room]`): `mx`, `snap <Actor>`, `steal`, `cam`, `key <Key>`, `npcs`, `traps`, `tp`, `fps`, `loop`, `profile`, `screenshot`, `ui`, `click <label>`, `settings` (open Settings), `texts <exact text>`, `rects <path suffix>`, `bindings`, `actiontest <Map/Action> <Key..>`, `jumpkey <Key>`, `looking`, `doors`, `doorprobe <i> <closeon|open1|open2|oc_open|oc_closeon>`, `hideprobe [i]`, `lag <ms>`, `stealaudit [i]`, `spotaudit [House] [ids]`, `opennear <i> [r] [name]`, `faceitem <i> [any]`, `facepos x y z`, `nearby <i>`, `freespots`, `warplog start|dump|clear`, `noise x y z [vol]`, `hold <Key> <s>`.
 - Game time: 1 game minute = 1 real second at timescale 1, but `GameTimeController` multiplies by Time.timeScale twice, so `console timescale N` runs the clock at N² speed.
 - Test runs read the user's save00 slot but never save it; launch.ps1 still backs up `*.dat` to backups/saves/<timestamp>. Restore settings.dat from the first backup of a session when done.
 - Computer-use access to the game was declined by the user; use the agent for input and screenshots.
