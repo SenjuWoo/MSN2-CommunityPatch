@@ -1,12 +1,12 @@
 # MAP — where everything is (read this before touching code)
 
-Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.3.0). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2, 0.3.0. Older snapshots are frozen rollback copies, never edit them.
+Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.4.0). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2, 0.3.0, 0.4.0. Older snapshots are frozen rollback copies, never edit them.
 
 ## Folders
 | Path | Tracked | What |
 |---|---|---|
-| `MSN2 Expansion 0.3.0/` | yes | active code, tools, docs, packs, `skins/<id>/skin.json` (generated skin data is gitignored) |
-| `MSN2 Expansion 0.2.2/`, `0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions (0.2.2 also holds the archived `PLAN-0.2.2.md`) |
+| `MSN2 Expansion 0.4.0/` | yes | active code, tools, docs, packs, `CUT_CONTENT.md`, `skins/<id>/skin.json` (generated skin data is gitignored) |
+| `MSN2 Expansion 0.3.0/`, `0.2.2/`, `0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions (0.2.2 also holds the archived `PLAN-0.2.2.md`) |
 | `PLAN.md` (root) | yes | current plan (0.3.0-0.5.0) |
 | `.github/` (root) | yes | CI (`validate.yml`), Dependabot |
 | `WORKSPACE_OWNERSHIP.md`, `LICENSE`, `.gitattributes` (root) | yes | ownership rules, MIT licence, CRLF for .cs/.ps1 |
@@ -17,7 +17,7 @@ Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURREN
 
 Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `BepInEx/plugins/MSN2/`, plus `BepInEx/MSN2/agent/` for the test bridge.
 
-## Code (in `MSN2 Expansion 0.3.0/src/`)
+## Code (in `MSN2 Expansion 0.4.0/src/`)
 **MSN2CommunityPatch** (no game files, Harmony + BepInEx)
 - `Plugin.cs`: entry, config binds, applies each fix in isolation (`TryApply`).
 - `Fixes/HouseHudFix.cs`: house HUD null exception + portraits + zone handlers.
@@ -43,14 +43,16 @@ Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `
 
 - `ActorNames.cs`: shows a skin's display name in job text (reads `MSN2Characters.Skins.SkinApplier.DisplayNames` by reflection).
 
-Packs: `packs/neighbourhood-classics/pack.json` (5 jobs). Format: `docs/PACK_FORMAT.md`.
+Packs: `packs/neighbourhood-classics/pack.json` (5 jobs), `packs/house-help/pack.json` (3 jobs: Yuka, Jamal, Peter). Format: `docs/PACK_FORMAT.md`.
 
 **MSN2Characters** (optional; GUID `senjuwoo.msn2.characters`; compiles against the game's own mscorlib because Unity 6 APIs have Span overloads)
 - `Plugin.cs`: config `[Skins] Camila = lola`; `CharactersRuntime` loads packs from the main menu on and applies them once the Game scene's `EntitiesController` has the actor.
 - `Skins/MsnmReader.cs`: `.msnm` v1 parser (worker thread) + `Mesh` builder. Format spec: `tools/charport/msnm.py`.
 - `Skins/SkinPack.cs`: `skin.json` model, loading (one texture/mesh per frame, normal maps `_n.png` linear, Repeat wrap for UDIM tiles), portrait sprites.
 - `Skins/SkinApplier.cs`: body swap on the actor's `ActorSkinnedMeshRenderer` (bones by name), extra renderers (hair, scalp) beside it, garments via a postfix on `ClothesController.AttachClothing`, materials cloned from Camila's (`template`), identity (portraits incl. 6 `ConditionalPortraits`, name rewrite in `LocalizationManager.Translate` + one sweep of existing TMP texts), full revert.
-- `CharacterAgent.cs`: test commands (`skin`, `wear`, `blend`, `look`, `portrait`, `spritedump`, `actor`, `fsm`, `beds`).
+- `CutNpcs/Neighbours.cs`: `[Neighbours]`/`[Scenes]`/`[Restored]` switches: resident removal + timetable FSM swaps applied once per Game scene (originals restored first), Yuka bunny suit via a `WearClothingPack` prefix.
+- `CutNpcs/CutAudit.cs`: `cutaudit` runtime dump of repositories/timetables/residents (CUT_CONTENT.md source).
+- `CharacterAgent.cs`: test commands (also `cutaudit`, `house open|close`) (`skin`, `wear`, `blend`, `look`, `portrait`, `spritedump`, `actor`, `fsm`, `beds`).
 
 Skins: `skins/lola/skin.json` (git) + generated `body.msnm`, `hair.msnm`, `scalp.msnm`, `clothes/*.msnm`, `tex/*.png`, `portrait*.png`, `manifest.json` (release zip only). Rebuild: `vendor/pyenv/Scripts/python.exe -I tools/charport/convert_skin.py --msn1 "<MSN1>/My Sexy Neighbor_Data" --msn2 "<MSN2>/My Sexy Neighbour 2_Data" --out skins/lola` (cache in `skins/lola/.build`), then `portrait Camila` in game and copy `portrait*.png` into the skin folder.
 
@@ -82,6 +84,7 @@ Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\Steam
 `gh` works as SenjuWoo (`gh api user -q .login`). The keyring label "ShugokiFable" is only a label.
 
 ## Known non-bugs / dead ends (do not re-investigate without new evidence)
+- Yuka/Jamal/Peter are not cut: house residents activated by `HouseOpenerController.OpenHouse` (CUT_CONTENT.md). Day-1 test saves keep Camila's/Emma's houses closed: `house open <House>` or `actor <X> activate`.
 - NPC schedule teleports: not reproduced over 5 accelerated days (only Chloe's webcam FSM hops). Use `warplog` with a save that shows it.
 - Gallery sex scenes: the feature does not exist in MSN2.
 - `sex` and `cum_on` hooks: verified in 0.2.2 (agent `sex` / `fap`). An NPC's root capsule, which the game's fap code credits, is off in many FSM states (alert, webcam, bath); that is vanilla.

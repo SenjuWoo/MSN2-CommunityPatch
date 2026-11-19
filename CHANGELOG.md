@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.4.0 — 2026-11-19
+Parent: 0.3.0. Goal: cut content (PLAN.md 0.4.0).
+- Audit: `CUT_CONTENT.md` classifies every ActorID, FSMID, ClothID/pack, letter, static photo, perk, challenge and achievement (runtime dump `cutaudit` + decompiled code + Addressables catalog)
+- Finding: Yuka, Jamal and Peter are not cut. They are residents of Emma's / Camila's houses in the shipped scene data, with full timetables; `HouseOpenerController.OpenHouse` activates them with Camila/Emma. Verified: both houses open, 2 accelerated days, every FSM entered (incl. all couple scenes), 0 exceptions from mod code
+- Characters: `[Neighbours] Yuka/Jamal/Peter` and `[Scenes] CamilaJamal/EmmaPeter/EmmaYuka/YukaMasturbation/YukaGynChair` switches (default on = vanilla; off = removed from the house's residents and/or the scene hours swapped for the partner's solo FSM in memory, never saved)
+- Restored: Yuka's bunny suit (in her clothes repository and the Addressables catalog, never worn): she wears it 20-22 (prefix on `ClothesController.WearClothingPack`)
+- Not restorable (assets not shipped): `Chloe_Monday` FSM, an older Chloe casual outfit (5 ClothIDs)
+- Expansion: new pack `house-help` (3 jobs: Yuka, Jamal, Peter)
+- Dev commands: `cutaudit`, `house open|close <House>`
+
 ## 0.3.0 — 2026-11-19
 Parent: 0.2.2. Goal: Lola from My Sexy Neighbor replaces Camila (PLAN.md 0.3.0).
 - New plugin **MSN2 Characters** (`senjuwoo.msn2.characters`, optional): data-driven skins in `plugins/MSN2/skins/<id>/` (`skin.json` + `.msnm` meshes + PNG textures). `[Skins] Camila = lola`. Visual only: `ActorID.Camila`, saves, FSMs, schedules, sex scenes and photos are unchanged; removing the DLL restores Camila

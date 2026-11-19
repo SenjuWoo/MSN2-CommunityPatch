@@ -1,8 +1,11 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.3.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
+Active snapshot: `MSN2 Expansion 0.4.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
 
-**NEXT ACTION: PLAN.md T12** (snapshot 0.4.0 + CUT_CONTENT.md audit). T13 finding already known: `HouseOpenerController.OpenHouse/CloseHouse` activates `HouseZone.Residents`; the cut NPCs are not in any Residents list.
+**NEXT ACTION: PLAN.md T17** (release v0.4.0), then T18 (snapshot 0.5.0, sex gallery + replay).
+
+## 0.4.0 progress (2026-11-19)
+- T12-T16 done: CUT_CONTENT.md; Yuka/Jamal/Peter are live house residents (not cut); switches + Yuka bunny suit + house-help pack. Evidence `backups/evidence/0.4.0/`.
 
 ## 0.3.0 released (2026-11-19)
 - https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.3.0 (tag @ 5136fd3; validate + CodeQL green; alerts 0/0/0). Assets sha256: CommunityPatch 10A2884F87F4098E3C9014F145DB2213CC18758C74C22C196E1AB1B91FAA2788, Expansion 78634C8253F282B38A2BA85A60279210CFFF88055CF285F2E3D3ED90C2A694E1, Characters E65FB686C6E6092622C875F1AD445F4AFFCE70E657AD57BC8BA6388978FAAD10 (downloaded = dist). DLLs 9584bba1 / d03de8da / 8c7ec1e9 (fresh clone identical). Game folder: quiet install of 0.3.0; save00 byte-identical to session start, settings.dat restored.
