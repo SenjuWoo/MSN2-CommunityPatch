@@ -2,9 +2,10 @@
 
 Active snapshot: `MSN2 Expansion 0.4.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
 
-**NEXT ACTION: PLAN.md T17** (release v0.4.0), then T18 (snapshot 0.5.0, sex gallery + replay).
+**NEXT ACTION: PLAN.md T18** (snapshot 0.5.0; MSN1 systems: gallery/replay, altar + stats, telescope + safe, rain + difficulty).
 
-## 0.4.0 progress (2026-11-19)
+## 0.4.0 released (2026-11-19)
+- https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.4.0 (tag @ 47458eb; validate + CodeQL green; alerts 0/0/0). Assets sha256 (downloaded = dist): CommunityPatch 8E5BA774CBDCDB8D8FD1E276A4884075012ED8D06D8A2B2BD3DD4947043EC45C, Expansion AD0473DADD7DCD758A905FE308AC632AC39B93DC5B63FC1274F9B34D14EC93E7, Characters 951423F06DC538FF4344F35473E5D53DC45E591E9820D62F9444FEB0DCE147BD. Quiet install; save00 identical; settings.dat restored.
 - T12-T16 done: CUT_CONTENT.md; Yuka/Jamal/Peter are live house residents (not cut); switches + Yuka bunny suit + house-help pack. Evidence `backups/evidence/0.4.0/`.
 
 ## 0.3.0 released (2026-11-19)
