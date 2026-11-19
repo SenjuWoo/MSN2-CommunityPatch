@@ -1,8 +1,8 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.2.2` (CURRENT.txt, in progress; 0.2.1 released and frozen). Updated 2026-11-19. Project map: MAP.md. Work plan: PLAN.md (0.2.2).
+Active snapshot: `MSN2 Expansion 0.2.2` (CURRENT.txt, released as v0.2.2). Updated 2026-11-19. Project map: MAP.md. Last plan: PLAN.md (0.2.2, all tasks closed).
 
-**NEXT ACTION: PLAN.md T12** (commit, push, CI on the exact SHA, gh release v0.2.2, verify asset hashes, alerts, install quiet config, restore settings.dat, confirm save00.dat).
+**NEXT ACTION: wait for the owner.** 0.2.2 is the stable base. Open: owner's pick for the next features (0.3.0 MSN1 systems per TASKS.md "Next"), the Steam threads newer than 2026-10-13 (hub is login-gated: paste them into TASKS.md "Steam triage 2026-11"), the arrest design question (job progress kept, vanilla resets entities), owner hands-on of Settings > Controls.
 
 ## Recovery 2026-11-19 (third: local workspace lost)
 - Found: the owner folder held only the two extracted v0.2.1 release zips (sha256-identical to the GitHub assets). git checkout, `research/`, `vendor/`, `backups/`, `dist/` were gone; the game folder was vanilla (files re-downloaded 2026-10-27, buildid still 21130045, no BepInEx).
@@ -16,6 +16,9 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - Resume rule: verify against `git status`, the release assets and `BepInEx/LogOutput.log` before trusting this file.
 
 ## Done
+- **0.2.2 released 2026-11-19:** https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.2.2 (tag @ 663df4f; validate/packs + CodeQL actions/csharp/javascript green on that SHA; open alerts Dependabot 0, code scanning 0, secret scanning 0; downloaded assets byte-identical to dist/0.2.2: CommunityPatch sha256 37018FFB9D78CF43C22CF0ADF1EC5144B5F5F7C6CD48298BE2C68DE026C3B03F, Expansion 9EC44213AFF98B73A1F68FDD9D0025F4098D94772E4BB7395A9FEFB722115D4D; plugin DLLs E655A4B3... / 6AE21C34..., a fresh clone of 663df4f builds the same bytes). Content: AnimatorCulling default on, SmallObjectShadows default off, cum_on counted once per finish, test gaps closed (TEST_RESULTS.md 0.2.2). Push note: GitHub printed 'Required status check "packs" is expected' (owner bypass on main); the check then passed on that SHA.
+- Game folder holds the 0.2.2 release install with quiet defaults (cfg files regenerated: AgentBridge off, VerboseLog off, PlayerLoopTiming off, VSync on, AnimatorCulling on); release smoke without agent: both plugins load 0.2.2, 0 warnings/errors, clean exit. Dev config with the [Performance] keys: backups/devcfg.
+- User data: save00.dat byte-identical to backups/saves/20261119-014624-session-start (41D0F527...); settings.dat restored from it; no expansion sidecar left behind.
 - **0.2.1 released:** https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.2.1 (main @ 98e1793; CI validate + CodeQL green; alerts 0/0/0; downloaded asset bytes match dist: CommunityPatch sha256 9BA3D5FA…CF1F8, Expansion 9B051B1C…CDB3). Fixes: journal font after reload, key blocking while typing/paused, HUD off caught screen.
 - 0.1.0 released: https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.1.0 (tag @ 09ecaf1, CI validate + CodeQL green). Frozen copy: `MSN2 Expansion 0.1.0`.
 - **0.2.0 released:** https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.2.0 (main @ 18b2ebd; CI validate + CodeQL green; open alerts 0/0/0; downloaded asset bytes match dist: CommunityPatch sha256 0DE569ED…8E30C, Expansion 1ECD5041…D35CF). `gh` works as SenjuWoo (`gh api user -q .login`); keyring label "ShugokiFable" is a label only.
@@ -24,11 +27,10 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - User data untouched: save00.dat byte-identical to the original; settings.dat restored to its session-start state (backups/saves/20261012-204323).
 
 ## Next
-- 0.2.1 (released; details): fixed journal/tracker text invisible after reload (arrest -> Load), journal keys firing while typing in game text boxes / pause menu, HUD over the caught screen. Game folder has the 0.2.1 build with quiet config; user save restored to the original (backups/saves/pre-arrest-20261013).
-- Still untested: `sex`/`cum_on` hooks, jobs 2-5 played through, gamepad, owner hands-on of Controls. Open design question: arrest keeps job progress while vanilla resets entities (cams/items) - ask owner.
-- Commit the docs update (this file + memory) and push; confirm CI on the new SHA and alerts = 0.
-- Hands-on test of Settings > Controls by the owner (not yet done).
-- 0.3.0: MSN1 systems per TASKS.md "Next".
+- Owner decides the next scope (0.3.0 MSN1 systems in the owner's order: souvenir shelf, telescope, safe cracking, weather/rain; then more packs).
+- Steam triage: paste threads newer than 2026-10-13 (hub needs login).
+- Not measurable here: low-end GPU / Steam Deck / D3D12 (SmallObjectShadows might help GPU-bound PCs), physical gamepad, non-English layouts, owner hands-on of Controls.
+- Arrest keeps job progress while vanilla resets entities (cams/items): owner's call.
 
 ## Dev notes
 - Dev config in the game folder is quiet by default now; `relaunch.ps1 -Config @{ AgentBridge='true'; VerboseLog='true' }` switches it on for a session (edits every senjuwoo.msn2.*.cfg that has the key).
