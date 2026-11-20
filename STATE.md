@@ -8,7 +8,7 @@ Active snapshot: `MSN2 Expansion 0.5.0` (CURRENT.txt). Updated 2026-11-20. Proje
 - Expansion Systems/: sex gallery + replay (G), statistics (K), souvenir altar, telescope, safe cracking, rain, difficulty presets; sidecar schema 2. All verified in game (`MSN2 Expansion 0.5.0/TEST_RESULTS.md`, evidence `backups/evidence/0.5.0/`).
 - Fixes from testing: rain indoors (owner report; ceiling raycast + particle collision), rain colour/size, rain audio on the Ambient mixer group, drop material reused, telescope zoom reset, replay vs police.
 - Regression: 14-min quiet session 0 errors; leak check 242 -> 238 FPS after 20 toggles + 48 h.
-- Release: RELEASE_PENDING
+- Released: https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.5.0 (tag @ 8d27a6f; validate, packs, CodeQL x4 green; alerts 0/0/0). Assets sha256 (downloaded = dist): CommunityPatch 3EE054036F173ED344A4914A8077F6A677BA562C1AC7A60AEDFE962D7EA19AA4, Expansion 780B532B05E9DD55C030B7461D28CF954217B2B6CD5371654193BEE9DB98729B, Characters 6A3E44EB7AF662558A1D5F6C3E7B816D5D42EBC771C3276729686183E723065E. Game folder: quiet 0.5.0 install (AgentBridge/VerboseLog false), save00 identical (41D0F527D623), settings.dat restored, no sidecar.
 
 ## 0.4.0 released (2026-11-19)
 - https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.4.0 (tag @ 47458eb; validate + CodeQL green; alerts 0/0/0). Assets sha256 (downloaded = dist): CommunityPatch 8E5BA774CBDCDB8D8FD1E276A4884075012ED8D06D8A2B2BD3DD4947043EC45C, Expansion AD0473DADD7DCD758A905FE308AC632AC39B93DC5B63FC1274F9B34D14EC93E7, Characters 951423F06DC538FF4344F35473E5D53DC45E591E9820D62F9444FEB0DCE147BD. Quiet install; save00 identical; settings.dat restored.
