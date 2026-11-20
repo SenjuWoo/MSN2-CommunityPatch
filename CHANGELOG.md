@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0 — 2026-11-20
+Parent: 0.4.0. Goal: MSN1 systems (PLAN.md 0.5.0).
+- Expansion `Systems/`: sex gallery + replay (G), statistics (K), souvenir altar (+2%/kind job money, max +20%), telescope (phone zoom 20 → 4 next to it), safe cracking on Emma's 2 safes (deterministic 4-digit code per slot/safe, Mastermind hints, noise on wrong codes, cash + item), rain (per-day spells, MSN1 rain loop extracted by `tools/charport/extract_audio.py`, player noise x0.6), difficulty presets (x0.7 / x1 / x1.4 on EyesSensor alert time, player noise, police detection). One `[Systems]` switch each
+- Sidecar schema 2 with migration from 1 (gallery, stats, trophies, cracked safes)
+- Replay safety: refuses while the police are on their way; `PoliceController.CallCops` is ignored during a replay
+- Fixes found in testing: rain inside the player's house (ceiling raycast + drops die on roofs/ceilings), red/thick rain streaks (own drop material cloned from `Particles_WaterShower`, size clamp), telescope zoom stuck at 4x after a rebuild, replay could carry an active police call (replay now waits until the police have left; police calls are ignored during a replay); rain sound plays through the game's Ambient mixer group (volume slider + pause apply), drop material built once per session
+- Known limitation: rain does not darken the sky (fog variants are stripped from the game build)
+- Dev commands: `sys info|altar|trophy|telescope|safes|rain|noise|alerttime|diff|unstick|replay|key`
+
 ## 0.4.0 — 2026-11-19
 Parent: 0.3.0. Goal: cut content (PLAN.md 0.4.0).
 - Audit: `CUT_CONTENT.md` classifies every ActorID, FSMID, ClothID/pack, letter, static photo, perk, challenge and achievement (runtime dump `cutaudit` + decompiled code + Addressables catalog)

@@ -19,7 +19,7 @@ Runtime mods for **My Sexy Neighbour 2** (Steam, Unity 6000.2.2 Mono) built on B
 | Mod | What it does |
 |---|---|
 | **MSN2 Community Patch** | Fixes the per-frame HUD exception (+23% FPS measured), the 60 FPS cap on Medium/Low, NPCs freezing on ignored interrupts, the Low preset light budget, the wardrobe interaction that threw the player off the map at low FPS, and theft spawn points inside furniture; adds graphics options, **key remapping** on Settings > Controls and off-screen animator culling. |
-| **MSN2 Expansion** | MSN1-style story jobs: journal, objective tracker, dialogue, main goals + Souvenir / Hidden-Cam / Shadow / Timed bonuses, chained jobs, JSON job packs, saves beside the game save. Ships the 5-job *Neighbourhood Classics* pack. |
+| **MSN2 Expansion** | MSN1-style story jobs: journal, objective tracker, dialogue, main goals + Souvenir / Hidden-Cam / Shadow / Timed bonuses, chained jobs, JSON job packs, saves beside the game save. Ships the 5-job *Neighbourhood Classics* pack. **First-game systems**: sex gallery with replay, statistics, souvenir altar, telescope, safe cracking, rain, difficulty presets. |
 | **MSN2 Characters** (optional) | **Lola from the first game replaces Camila**: body, face, hair, outfits, name and portraits. Visual only, so schedules, scenes and saves are untouched; delete the DLL and Camila is back. Switches for **Yuka, Jamal and Peter** and their scenes; Yuka's unused bunny suit restored. |
 
 ## Lola replaces Camila (optional plugin)
@@ -30,12 +30,15 @@ Players: download the zips from [Releases](../../releases) and extract into the 
 ## Cut neighbours restored
 Yuka (Emma's maid), Jamal (Camila's housemate) and Peter (Emma's husband) look cut, but they ship as residents of Camila's and Emma's houses with full schedules and couple scenes; they appear when the story opens those houses (`CUT_CONTENT.md` has the audit). MSN2 Characters adds per-neighbour and per-scene switches in `senjuwoo.msn2.characters.cfg` (`[Neighbours]`, `[Scenes]`, default on), restores Yuka's never-worn bunny suit for her evening shift, and the Expansion's *House Help* pack has a job for each of them.
 
+## First-game systems (Expansion 0.5.0)
+Sex gallery with replay (G), statistics screen (K), a souvenir altar in your room (+2% job money per trophy kind), a telescope at your window (5x phone zoom), keypad safes in Emma's house (Mastermind hints, cash + item), rainy spells (noise x0.6) and Easy/Normal/Hard detection presets. Each has a switch in `[Systems]` of `senjuwoo.msn2.expansion.cfg`.
+
 ## Repository layout
 ```
 CURRENT.txt                    active snapshot folder
-MSN2 Expansion 0.4.0/
+MSN2 Expansion 0.5.0/
   src/MSN2CommunityPatch       patch plugin
-  src/MSN2Expansion            expansion framework plugin
+  src/MSN2Expansion            expansion framework plugin (Systems/ = first-game systems)
   src/MSN2Characters           optional skins plugin (Lola replaces Camila)
   skins/lola/skin.json         skin definition (meshes/textures are generated, not in git)
   tools/charport/              MSN1 -> MSN2 character converter (UnityPy) + .msnm format
@@ -53,8 +56,8 @@ MAP.md                         full project map: code, runtime paths, tools, rel
 Needs the game installed (assemblies are referenced from its `Managed` folder, never committed), .NET SDK 8+, and BepInEx 5.4.23.5 extracted to `vendor/BepInEx_5.4.23.5` (gitignored).
 ```powershell
 $env:MSN2_GAME_DIR = 'D:\Steam\steamapps\common\My sexy Neighbour 2'   # only if not S:\SteamLibrary\steamapps\common\My sexy Neighbour 2 (tools/common.ps1 default)
-& '.\MSN2 Expansion 0.4.0\tools\build.ps1'
-& '.\MSN2 Expansion 0.4.0\tools\package.ps1' -Version 0.4.0
+& '.\MSN2 Expansion 0.5.0\tools\build.ps1'
+& '.\MSN2 Expansion 0.5.0\tools\package.ps1' -Version 0.5.0
 ```
 `tools/relaunch.ps1` + `tools/agent.ps1` drive the running game for tests (enable `[Debug] AgentBridge` in the patch config).
 

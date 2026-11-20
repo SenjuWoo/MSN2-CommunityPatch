@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MSN2Expansion</AssemblyName>
+    <RootNamespace>MSN2Expansion</RootNamespace>
+    <Version>0.5.0</Version>
+    <!-- Compile against the game's own mscorlib: Unity 6 APIs (AudioClip.SetData) have ReadOnlySpan overloads the
+         net472 reference mscorlib cannot resolve (CS0518). Same setup as MSN2Characters. -->
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib"><HintPath>$(Managed)\mscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System"><HintPath>$(Managed)\System.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(Managed)\System.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.InputSystem"><HintPath>$(Managed)\Unity.InputSystem.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

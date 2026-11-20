@@ -1,0 +1,35 @@
+# Tasks
+
+## Done (runtime-verified, see TEST_RESULTS.md)
+- BepInEx 5.4.23.5 on Unity 6000.2.2 Mono; build/install/launch/agent/package scripts
+- Patch 0.1.0: HUD exception spam fix, portraits fix, FPS-cap fix, interrupt timeout guard, graphics options, Low preset fix
+- Patch 0.2.0: wardrobe fling fix (the "doors throw me off the map" reports), 12 unreachable theft spawn points taken out of rotation, key remapping on Settings > Controls (+ HUD hint sync)
+- Expansion: pack loader + validation, sidecar saves, journal/tracker/dialogue UI, notifications, rewards, chaining, turn-in, souvenir spawns
+- Hooks verified in game: photo (actor/house/activity/naked), steal, hidden camera, trap, zone/room enter, alert, hour
+- Save/load across restarts; vanilla load with the expansion removed; re-adoption without duplicates
+- Pack content checks: camera spots exist in every targeted room; Chloe bath = Shower, Camila yoga = Exercise (gym)
+- 0.2.2: `sex` and `cum_on` hooks triggered through the game's own code (cum_on now counts once per finish and carries the house); jobs 1-5 played start to finish with rewards matching the pack; gamepad actions verified with a virtual Input System gamepad before/after key rebinds and Reset all keys
+- 0.2.2: AnimatorCulling (prop animators stop posing off screen; default on after an A/B and regression set); reproducible builds (PathMap, no SourceLink)
+
+## Done 0.5.0
+- MSN1 systems: sex gallery + replay (G), statistics (K), souvenir altar, telescope, safe cracking, rain, difficulty presets (TEST_RESULTS 0.5.0)
+
+## Partial
+- SmallObjectShadows: built, measured no gain on this CPU-bound rig (ships off); a GPU-bound machine may differ
+- Graphics options: values applied to URP assets (logged); no per-option visual A/B or low-end GPU measurement
+- Interrupt timeout: guard active, normal trap cycle unaffected; the original freeze was not reproduced
+- Key remapping: verified with injected keyboard events and a virtual gamepad; physical gamepads, other languages and physically typed keys untested. Mouse buttons are not rebindable on purpose
+- Theft spots: the 12-spot list comes from a probe audit of build 21130045; spots reachable only by an unusual route (standing on furniture, crouch-jumping) may have been counted unreachable
+
+## Investigated, no change
+- NPC schedule teleports / wall clipping: not reproduced (see MODDING_PLAN.md); keep `warplog` for new evidence, ask for a save/situation where it happens
+- Gallery missing sex scenes: the feature does not exist in MSN2 (only world photos and promo images)
+
+## Next
+- Lola polish (owner saw the 0.3.0 screenshots): grainy dithered hair (alpha/transparency mode of the hair material), dark area around the eyes (face tile / material), halve hair and clothes textures (~250 MB VRAM)
+- 0.5.0 leftovers: police difficulty multiplier measured in a chase; rain does not darken the sky (fog variants stripped)
+- House Help pack: full turn-ins, traps and sleeping pills on Yuka/Jamal/Peter not run
+- More packs; localisation keys for pack text
+
+## Steam triage 2026-11
+- NOT RUN: the Steam discussions hub for app 3684710 is login-gated ("You must be logged in to view this Community Hub" in the built-in browser, 2026-11-19). Paste threads newer than 2026-10-13 here to triage them.

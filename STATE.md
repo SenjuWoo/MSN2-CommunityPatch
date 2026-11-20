@@ -1,8 +1,14 @@
 # STATE — MSN2 Community Patch + Expansion
 
-Active snapshot: `MSN2 Expansion 0.4.0` (CURRENT.txt). Updated 2026-11-19. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
+Active snapshot: `MSN2 Expansion 0.5.0` (CURRENT.txt). Updated 2026-11-20. Project map: MAP.md. Plan: PLAN.md (0.3.0 -> 0.5.0; the 0.2.2 plan is archived in `MSN2 Expansion 0.2.2/PLAN-0.2.2.md`).
 
-**NEXT ACTION: PLAN.md T18** (snapshot 0.5.0; MSN1 systems: gallery/replay, altar + stats, telescope + safe, rain + difficulty).
+**NEXT ACTION: next round (owner's call): Lola polish (hair dithering, dark eye area, halve texture VRAM ~250 MB), House Help pack turn-ins/traps/pills, measure the police difficulty multiplier in game.**
+
+## 0.5.0 (2026-11-20)
+- Expansion Systems/: sex gallery + replay (G), statistics (K), souvenir altar, telescope, safe cracking, rain, difficulty presets; sidecar schema 2. All verified in game (`MSN2 Expansion 0.5.0/TEST_RESULTS.md`, evidence `backups/evidence/0.5.0/`).
+- Fixes from testing: rain indoors (owner report; ceiling raycast + particle collision), rain colour/size, rain audio on the Ambient mixer group, drop material reused, telescope zoom reset, replay vs police.
+- Regression: 14-min quiet session 0 errors; leak check 242 -> 238 FPS after 20 toggles + 48 h.
+- Release: RELEASE_PENDING
 
 ## 0.4.0 released (2026-11-19)
 - https://github.com/SenjuWoo/MSN2-CommunityPatch/releases/tag/v0.4.0 (tag @ 47458eb; validate + CodeQL green; alerts 0/0/0). Assets sha256 (downloaded = dist): CommunityPatch 8E5BA774CBDCDB8D8FD1E276A4884075012ED8D06D8A2B2BD3DD4947043EC45C, Expansion AD0473DADD7DCD758A905FE308AC632AC39B93DC5B63FC1274F9B34D14EC93E7, Characters 951423F06DC538FF4344F35473E5D53DC45E591E9820D62F9444FEB0DCE147BD. Quiet install; save00 identical; settings.dat restored.

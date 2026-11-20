@@ -1,0 +1,72 @@
+{
+  "id": "house-help",
+  "name": "House Help",
+  "version": "0.1.0",
+  "author": "SenjuWoo",
+  "minFramework": "0.1.0",
+  "missions": [
+    {
+      "id": "hh01_maid_service",
+      "title": "Maid Service",
+      "giver": "The Collector",
+      "description": "Emma's house came with staff. Yuka, the maid, spends her afternoons in the laundry room, and not only washing.",
+      "unlock": { "houses": ["EmmaHouse"], "fromHour": 12, "toHour": 18 },
+      "intro": [
+        { "speaker": "The Collector", "text": "Emma has a maid. Quiet girl, Yuka. Nobody watches the laundry room in the afternoon." },
+        { "speaker": "The Collector", "text": "Somebody should. Get me a picture of her down there." }
+      ],
+      "objectives": [
+        { "id": "photo", "text": "Photograph Yuka in the laundry room", "type": "photo", "actor": "Yuka", "room": "EmmaHouse_Laundry" }
+      ],
+      "bonus": [
+        { "id": "naked", "text": "Catch Yuka with nothing on", "type": "photo", "actor": "Yuka", "naked": true, "reward": { "money": 125, "subscribers": 40 } },
+        { "id": "cam", "text": "Hide a camera in the laundry room", "type": "hidden_camera", "room": "EmmaHouse_Laundry", "reward": { "money": 75 } },
+        { "id": "shadow", "text": "Shadow: nobody raises the alarm", "type": "no_alert", "reward": { "money": 100 } }
+      ],
+      "reward": { "money": 300, "subscribers": 120 },
+      "outro": [ { "speaker": "The Collector", "text": "The help helps herself. Lovely." } ]
+    },
+    {
+      "id": "hh02_house_rules",
+      "title": "House Rules",
+      "giver": "The Collector",
+      "description": "Camila's housemate Jamal and the locked room upstairs: every afternoon the two of them disappear in there.",
+      "unlock": { "houses": ["CamilaHouse"], "fromHour": 13, "toHour": 18 },
+      "intro": [
+        { "speaker": "The Collector", "text": "Camila doesn't live alone. Big guy, Jamal. Afternoons, the red room door stays shut." },
+        { "speaker": "The Collector", "text": "I want Jamal on camera in that room. You'll see why." }
+      ],
+      "objectives": [
+        { "id": "photo", "text": "Photograph Jamal in the red room", "type": "photo", "actor": "Jamal", "room": "CamilaHouse_RedRoom" }
+      ],
+      "bonus": [
+        { "id": "both", "text": "Get Camila in the shot too", "type": "photo", "actor": "Camila", "room": "CamilaHouse_RedRoom", "reward": { "money": 100, "subscribers": 50 } },
+        { "id": "cam", "text": "Hide a camera in the red room", "type": "hidden_camera", "room": "CamilaHouse_RedRoom", "reward": { "money": 75 } },
+        { "id": "shadow", "text": "Shadow: nobody raises the alarm", "type": "no_alert", "reward": { "money": 100 } }
+      ],
+      "reward": { "money": 350, "subscribers": 140 },
+      "outro": [ { "speaker": "The Collector", "text": "House rules. I like their house." } ]
+    },
+    {
+      "id": "hh03_late_shift",
+      "title": "Late Shift",
+      "giver": "The Collector",
+      "description": "Peter works all day and comes to bed at midnight. Emma waits up for him.",
+      "unlock": { "houses": ["EmmaHouse"], "fromHour": 22, "toHour": 24 },
+      "intro": [
+        { "speaker": "The Collector", "text": "Emma's husband, Peter. Desk all day, then midnight with his wife." },
+        { "speaker": "The Collector", "text": "Their bedroom, after midnight. Photo of Peter. Don't get caught, he's not the forgiving type." }
+      ],
+      "objectives": [
+        { "id": "photo", "text": "Photograph Peter in the master bedroom", "type": "photo", "actor": "Peter", "room": "EmmaHouse_Bedroom" }
+      ],
+      "bonus": [
+        { "id": "trap", "text": "Catch Peter in a trap", "type": "trap", "actor": "Peter", "reward": { "money": 100, "items": { "SleepingPill": 1 } } },
+        { "id": "shadow", "text": "Shadow: nobody raises the alarm", "type": "no_alert", "reward": { "money": 100 } },
+        { "id": "timed", "text": "Finish within 4 hours", "type": "within_hours", "hours": 4, "reward": { "subscribers": 50 } }
+      ],
+      "reward": { "money": 300, "subscribers": 120 },
+      "outro": [ { "speaker": "The Collector", "text": "Overtime pays. For both of us." } ]
+    }
+  ]
+}

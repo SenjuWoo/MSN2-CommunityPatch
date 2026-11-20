@@ -1,1 +1,1 @@
-MSN2 Expansion 0.4.0
+MSN2 Expansion 0.5.0

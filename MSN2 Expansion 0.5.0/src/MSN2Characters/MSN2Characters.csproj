@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <AssemblyName>MSN2Characters</AssemblyName>
+    <RootNamespace>MSN2Characters</RootNamespace>
+    <Version>0.5.0</Version>
+    <!-- Compile against the game's own mscorlib: Unity 6 APIs (Texture2D.LoadImage, Mesh.AddBlendShapeFrame) have
+         ReadOnlySpan overloads, and the net472 reference mscorlib has no Span, so overload resolution fails (CS0518). -->
+    <DisableImplicitFrameworkReferences>true</DisableImplicitFrameworkReferences>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib"><HintPath>$(Managed)\mscorlib.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System"><HintPath>$(Managed)\System.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="System.Core"><HintPath>$(Managed)\System.Core.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="UnityEngine.ImageConversionModule"><HintPath>$(Managed)\UnityEngine.ImageConversionModule.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.Addressables"><HintPath>$(Managed)\Unity.Addressables.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.ResourceManager"><HintPath>$(Managed)\Unity.ResourceManager.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="Unity.InputSystem"><HintPath>$(Managed)\Unity.InputSystem.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+</Project>

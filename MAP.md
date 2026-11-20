@@ -1,12 +1,12 @@
 # MAP — where everything is (read this before touching code)
 
-Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.4.0). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2, 0.3.0, 0.4.0. Older snapshots are frozen rollback copies, never edit them.
+Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURRENT.txt` (0.5.0). Released: 0.1.0, 0.2.0, 0.2.1, 0.2.2, 0.3.0, 0.4.0, 0.5.0. Older snapshots are frozen rollback copies, never edit them.
 
 ## Folders
 | Path | Tracked | What |
 |---|---|---|
-| `MSN2 Expansion 0.4.0/` | yes | active code, tools, docs, packs, `CUT_CONTENT.md`, `skins/<id>/skin.json` (generated skin data is gitignored) |
-| `MSN2 Expansion 0.3.0/`, `0.2.2/`, `0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions (0.2.2 also holds the archived `PLAN-0.2.2.md`) |
+| `MSN2 Expansion 0.5.0/` | yes | active code, tools, docs, packs, `CUT_CONTENT.md`, `skins/<id>/skin.json` (generated skin data is gitignored) |
+| `MSN2 Expansion 0.4.0/`, `0.3.0/`, `0.2.2/`, `0.2.1/`, `0.2.0/`, `0.1.0/` | yes | frozen copies of the released versions (0.2.2 also holds the archived `PLAN-0.2.2.md`) |
 | `PLAN.md` (root) | yes | current plan (0.3.0-0.5.0) |
 | `.github/` (root) | yes | CI (`validate.yml`), Dependabot |
 | `WORKSPACE_OWNERSHIP.md`, `LICENSE`, `.gitattributes` (root) | yes | ownership rules, MIT licence, CRLF for .cs/.ps1 |
@@ -17,7 +17,7 @@ Owner folder for MSN2 Community Patch + MSN2 Expansion. Active snapshot: `CURREN
 
 Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `BepInEx/plugins/MSN2/`, plus `BepInEx/MSN2/agent/` for the test bridge.
 
-## Code (in `MSN2 Expansion 0.4.0/src/`)
+## Code (in `MSN2 Expansion 0.5.0/src/`)
 **MSN2CommunityPatch** (no game files, Harmony + BepInEx)
 - `Plugin.cs`: entry, config binds, applies each fix in isolation (`TryApply`).
 - `Fixes/HouseHudFix.cs`: house HUD null exception + portraits + zone handlers.
@@ -40,6 +40,7 @@ Game folder (only written by `tools/install.ps1`, removed by `uninstall.ps1`): `
 - `Souvenirs.cs`: places stealable souvenirs on free theft points (`childCount == 0`). Without the patch, it can pick the 12 bad spots.
 - `ExpansionHud.cs`: journal, tracker, dialogue, notifications (UGUI in the game's TMP font).
 - `AgentCommands.cs`: test commands for the bridge (`mx`, `snap`, `steal`, `cam <House> [Room]`, `key`, `sex`, `fap`, `calm`, `addhours`).
+- `Systems/` (0.5.0, MSN1 systems, one `[Systems]` switch each, state in sidecar schema 2): `SystemsRuntime.cs` (config, statistics panel K, sex gallery G + replay, police block during replay), `Altar.cs` (trophies on the player-room bookshelf, job-money bonus), `Telescope.cs` (prop + phone zoom 4 nearby), `Safes.cs` (keypad on `OpenCloseEntity` "Safe", code per slot/safe), `Rain.cs` (spells, particles, `data/rain_*.wav`, noise x0.6), `Difficulty.cs` (alert time / noise / police multipliers), `SystemsAgent.cs` (`sys …` dev commands).
 
 - `ActorNames.cs`: shows a skin's display name in job text (reads `MSN2Characters.Skins.SkinApplier.DisplayNames` by reflection).
 
