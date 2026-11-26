@@ -6,3 +6,4 @@ dist/
 *.user
 backups/
 __pycache__/
+STATE.local.md

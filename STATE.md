@@ -4,6 +4,12 @@ Active snapshot: `MSN2 Expansion 0.5.0` (CURRENT.txt). Updated 2026-11-20. Proje
 
 **NEXT ACTION: next round (owner's call): Lola polish (hair dithering, dark eye area, halve texture VRAM ~250 MB), House Help pack turn-ins/traps/pills, measure the police difficulty multiplier in game.**
 
+## Docs pass (2026-11-26, no release)
+- README rewritten (cover, badges, install/uninstall, keys/config tables, build, how it works); `docs/presentation/` hero, social preview and a terminal shot from a real run (packs validator OK 2 packs / 8 jobs; `package.ps1` on a clean `git archive` of 0.5.0 builds all three plugins, 0 warnings / 0 errors, three zips). Social preview must be uploaded by hand (Settings > General).
+- Fresh-export rebuild: Patch and Characters DLLs byte-identical to the v0.5.0 assets; Expansion DLL differs (working tree of `src/MSN2Expansion/Systems/*.cs` etc. is LF while `.gitattributes` checks out CRLF, so the embedded PDB checksums differ). Behaviour is the same; next release should build from a clean checkout.
+- Stale headers in shipped readmes: `docs/release/CommunityPatch-README.txt:1` and `Characters-README.txt:1` say 0.4.0 inside the 0.5.0 zips. Fix in the next release.
+- Public-text cleanup: drive-letter game paths removed from README and MAP.md; the 2026-10-13 recovery notes moved to gitignored `STATE.local.md`.
+
 ## 0.5.0 (2026-11-20)
 - Expansion Systems/: sex gallery + replay (G), statistics (K), souvenir altar, telescope, safe cracking, rain, difficulty presets; sidecar schema 2. All verified in game (`MSN2 Expansion 0.5.0/TEST_RESULTS.md`, evidence `backups/evidence/0.5.0/`).
 - Fixes from testing: rain indoors (owner report; ceiling raycast + particle collision), rain colour/size, rain audio on the Ambient mixer group, drop material reused, telescope zoom reset, replay vs police.
@@ -64,8 +70,4 @@ Goal: a huge expansion for My Sexy Neighbour 2. Phase 1 = official patch for per
 - Test runs read the user's save00 slot but never save it; launch.ps1 still backs up `*.dat` to backups/saves/<timestamp>. Restore settings.dat from the first backup of a session when done.
 - Computer-use access to the game was declined by the user; use the agent for input and screenshots.
 - WindowsApps `python3` alias hangs; use node.
-
-## Recovery 2026-10-13 (second chat loss)
-- Cause: BleachBit wiped Claude transcripts. They live in `%USERPROFILE%\.claude\projects\<project>\<id>.jsonl` (+ Desktop metadata in `%APPDATA%\Claude\claude-code-sessions`), not in temp. Whitelist `.claude` and `.codex` in BleachBit.
-- Codex backup thread 01a13620 (`.codex\sessions\2026\10\13\rollout-...01a13620...jsonl`) ends at the v0.2.0 release; repo is newer (docs commits 86a7d65, 71d804f). No code lost. Lost: the post-release Steam bug triage conversation.
-- Steam hub threads (3684710 / 569291110057293585, 594069606514129316) are login-gated; fetch needs the owner's pasted text.
+- Machine/session notes (2026-10-13 recovery, local evidence list) live in gitignored `STATE.local.md`.

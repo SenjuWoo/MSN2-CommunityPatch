@@ -1,5 +1,10 @@
 # Changelog
 
+## Unreleased (docs only, no new release)
+- README: cover image, badges, install and uninstall steps from the in-zip readmes, keys and config tables, build-from-source steps without machine paths, how-it-works diagram; terminal shot from a real build and package run in `docs/presentation/`
+- MAP.md: game-folder note describes the Steam library lookup instead of a fixed drive path
+- STATE.md: machine and session notes moved to a gitignored local file
+
 ## 0.5.0 — 2026-11-20
 Parent: 0.4.0. Goal: MSN1 systems (PLAN.md 0.5.0).
 - Expansion `Systems/`: sex gallery + replay (G), statistics (K), souvenir altar (+2%/kind job money, max +20%), telescope (phone zoom 20 → 4 next to it), safe cracking on Emma's 2 safes (deterministic 4-digit code per slot/safe, Mastermind hints, noise on wrong codes, cash + item), rain (per-day spells, MSN1 rain loop extracted by `tools/charport/extract_audio.py`, player noise x0.6), difficulty presets (x0.7 / x1 / x1.4 on EyesSensor alert time, player noise, police detection). One `[Systems]` switch each

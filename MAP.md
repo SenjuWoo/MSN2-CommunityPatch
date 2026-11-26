@@ -65,7 +65,7 @@ Skins: `skins/lola/skin.json` (git) + generated `body.msnm`, `hair.msnm`, `scalp
 - Agent channel (dev only): `BepInEx\MSN2\agent\cmd.txt` in, `out\<id>.json` out.
 
 ## Tools (`<active snapshot>/tools/`)
-Set `MSN2_GAME_DIR` if the game is not at the default in `common.ps1` (`S:\SteamLibrary\steamapps\common\My sexy Neighbour 2`).
+`common.ps1` finds the game through Steam's library list (`libraryfolders.vdf`); set `MSN2_GAME_DIR` if it cannot.
 - `build.ps1 [-Configuration Release]`: builds the three plugins against the game's `Managed` DLLs.
 - `package.ps1 -Version X.Y.Z`: build, then writes `dist/X.Y.Z/` (three zips, payload only; Characters zip carries `skins/` without `.build`).
 - `charport/convert_skin.py`, `charport/msnm.py`, `charport/bone_map_msn1_to_msn2.json`: offline character converter (Python venv `vendor/pyenv`, UnityPy).
