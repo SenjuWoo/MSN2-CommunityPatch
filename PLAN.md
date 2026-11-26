@@ -22,7 +22,7 @@ Builder: read this file, `STATE.md` and `MAP.md`, then start at the first `pendi
 | Fact | Evidence |
 |---|---|
 | 0.2.2 released and installed; main @ e816fc1 clean; CI and alerts green | see 0.2.2 plan archive, STATE.md |
-| Tools: UnityPy 1.25.4 + numpy in `vendor/pyenv` (uv venv, SAFE-TOOLS verdict recorded); ilspycmd via the Reverse-this sandbox `bin\ilspycmd.cmd` (path from the machine map's tool roots; call it from PowerShell, not git-bash); AssetRipper GUI in the same sandbox (fallback only); Blender 5.3 on PATH (only for the optional hair decimation); Unity editor 6000.6.8f1 only (game is 6000.2.2f1, so **no AssetBundles**) | commands run this session |
+| Tools: UnityPy 1.25.4 + numpy in `vendor/pyenv` (uv venv); ilspycmd from the local reverse-engineering toolbox (path in `STATE.local.md`; call it from PowerShell, not git-bash); AssetRipper GUI from the same toolbox (fallback only); Blender 5.3 on PATH (only for the optional hair decimation); Unity editor 6000.6.8f1 only (game is 6000.2.2f1, so **no AssetBundles**) | commands run this session |
 | Decompiled code: MSN2 in `research/decompiled`, MSN1 in `research/msn1/decompiled` (505 files) | files exist |
 | MSN2 asset index `research/msn2_index.json`, MSN1 index `research/msn1_index.json`, CAB→bundle map `research/msn2_cab_map.json` | files exist |
 | Main game-scene bundle: `StreamingAssets/aa/StandaloneWindows64/839cebfdebea6683d9dd62dba1291e21.bundle` (2.4 GB). Its CAB `CAB-41dace0bcc48d7c9605e82fa9a44b094` holds the actor objects; meshes are in that CAB's `.sharedAssets` | `research/actors_dump.txt` |

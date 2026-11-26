@@ -18,8 +18,8 @@ performance problems players hit most; the **Expansion** brings back what made
 the first game, *My Sexy Neighbor*, work: story jobs with a client and bonuses,
 a sex gallery with replay, statistics, a souvenir altar, a telescope, safe
 cracking, rain and difficulty presets. The optional **Characters** plugin puts
-Lola from the first game in Camila's place and restores the neighbours who look
-cut. No game file is modified, and the game's own save is never written.
+Lola from the first game in Camila's place, adds switches for Yuka, Jamal and
+Peter and their scenes, and restores Yuka's never-worn bunny suit. No game file is modified, and the game's own save is never written.
 
 ## What you get
 
